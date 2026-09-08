@@ -115,13 +115,14 @@ export default function Home() {
       {/* Header */}
       <header className="border-b border-gray-200 bg-white/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <span className="text-lg font-bold text-gray-900">
+          <span className="text-md font-extrabold text-gray-900" style={{fontFamily: "Plus Jakarta Sans, Arial, Helvetica, sans-serif"}}>
             <Image
               src="/dispatchOS-logo.png"
               alt="DispatchOS Logo"
               width={32}
               height={32}
               className="inline-block mr-2"
+            
             />
             DispatchOS
           </span>
@@ -149,13 +150,13 @@ export default function Home() {
 
           <div className="text-center max-w-3xl mx-auto mb-12">
             {/* Headline */}
-            <span className="text-2xl md:text-4xl  text-gray-900 mb-2">
+            <span className="text-2xl md:text-3xl font-medium text-gray-900 mb-2 block" style={{fontFamily: "Plus Jakarta Sans, Arial, Helvetica, sans-serif"}} >
               No More Content <span className="text-[#00f0a]">Brainstorming</span>
             </span>
             
             {/* Sub-headline */}
             <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
-              Your AI marketing <span className="text-[#00f0a]">cofounder</span>
+              Your AI Marketing <span className="text-[#00f0a]">Cofounder</span>
             </h1>
             
             {/* Benefit line */}
