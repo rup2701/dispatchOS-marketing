@@ -1,14 +1,13 @@
 // app/page.tsx
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 // ─── Animation Component ──────────────────────────────────────────
 
 function CalendarAnimation({ onComplete }: { onComplete: () => void }) {
   const [progress, setProgress] = useState(0);
-  const [isComplete, setIsComplete] = useState(false);
   const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
   const posts = [
     { time: '09:00', platform: 'LinkedIn', status: 'Published' },
@@ -22,7 +21,6 @@ function CalendarAnimation({ onComplete }: { onComplete: () => void }) {
       setProgress(prev => {
         if (prev >= 100) {
           clearInterval(timer);
-          setIsComplete(true);
           onComplete(); // Tell parent to switch to static image
           return 100;
         }
@@ -104,11 +102,6 @@ function CalendarAnimation({ onComplete }: { onComplete: () => void }) {
 
 export default function Home() {
   const [showAnimation, setShowAnimation] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   const handleAnimationComplete = () => {
     // Wait 500ms for the animation to finish, then switch to static image
@@ -153,20 +146,26 @@ export default function Home() {
       <section className="py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-4">
           {/* Headline */}
+
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Your AI marketing <span className="text-[#00f0a1]">cofounder</span>
+            {/* Headline */}
+            <span className="text-2xl md:text-4xl  text-gray-900 mb-2">
+              No More Content <span className="text-[#00f0a]">Brainstorming</span>
+            </span>
+            
+            {/* Sub-headline */}
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
+              Your AI marketing <span className="text-[#00f0a]">cofounder</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-600 mb-3">
-              Stop thinking about content. Start shipping your product.
-            </p>
-            
-            <p className="text-sm text-gray-400 mb-8">
-              No brainstorming. No scheduling. Just a full calendar, ready to go.
+            {/* Benefit line */}
+            <p className="text-md text-gray-900 mt-6 mb-6">
+              ⚡ Put your content generation and publishing on auto-pilot — <br className="hidden sm:block" />
+              in less than <span className="font-semibold txt-[#00f0a1]">5 minutes</span>.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
               <a
                 href="https://app.dispatchos.com"
                 className="px-8 py-3 bg-[#00f0a1] text-gray-900 font-medium rounded-lg hover:bg-[#00d48a] transition shadow-lg shadow-[#00f0a1]/25"
@@ -180,38 +179,25 @@ export default function Home() {
                 See Pricing
               </a>
             </div>
+
           </div>
 
           {/* ─── Visual Container (Fixed Dimensions) ────────────── */}
           <div className="max-w-5xl mx-auto">
-            <div
-              className={`transition-opacity duration-700 ${
-                isVisible ? 'opacity-100' : 'opacity-0'
-              }`}
-            >
-              {/* Animation State */}
-              {showAnimation && (
-                <CalendarAnimation onComplete={handleAnimationComplete} />
-              )}
-
-              {/* Static Image State (Crossfades in) */}
-              <div
-                className={`transition-opacity duration-700 ${
-                  showAnimation ? 'opacity-0 h-0 overflow-hidden' : 'opacity-100'
-                }`}
-              >
-                <div className="rounded-xl border border-gray-200 shadow-lg overflow-hidden">
-                  <Image
-                    src="/screenshots/calendar-full.webp"
-                    alt="DispatchOS content calendar with scheduled posts"
-                    width={800}
-                    height={500}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
+            {showAnimation ? (
+              <CalendarAnimation onComplete={handleAnimationComplete} />
+            ) : (
+              <div className="rounded-xl border border-gray-200 shadow-lg overflow-hidden">
+                <Image
+                  src="/screenshots/calendar-full.webp"
+                  alt="DispatchOS content calendar with scheduled posts"
+                  width={800}
+                  height={500}
+                  className="w-full h-auto"
+                  priority
+                />
               </div>
-            </div>
+            )}
           </div>
 
           {/* Social Proof */}
