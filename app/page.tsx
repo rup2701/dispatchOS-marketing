@@ -101,7 +101,7 @@ export default function Hero() {
       {/* Header */}
       <header className="border-b border-gray-200 bg-white/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <span className="text-md font-bold text-gray-900" style={{ fontFamily: 'var(--font-geist-sans)' }}>
+          <span className="text-md font-bold text-gray-900" style={{ fontFamily: 'var("Plus Jakarta Sans")' }}>
             <Image src="/dispatchOS-logo.png" alt="DispatchOS Logo" width={32} height={32} className="inline-block mr-2" />
             DispatchOS
           </span>
@@ -128,7 +128,7 @@ export default function Hero() {
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'var(--font-geist-sans)' }}>
+            <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-4 spacing-[-1em]">
               Post more, <span className="text-[#00f0a1]">think less.</span>
             </h1>
 
