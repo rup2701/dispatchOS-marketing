@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-// ─── Animation Component ──────────────────────────────────────────
+// ─── Calendar Animation ──────────────────────────────────────────
 
 function CalendarAnimation({ onComplete }: { onComplete: () => void }) {
   const [progress, setProgress] = useState(0);
@@ -21,7 +21,7 @@ function CalendarAnimation({ onComplete }: { onComplete: () => void }) {
       setProgress(prev => {
         if (prev >= 100) {
           clearInterval(timer);
-          onComplete(); // Tell parent to switch to static image
+          onComplete();
           return 100;
         }
         return prev + 1;
@@ -33,34 +33,23 @@ function CalendarAnimation({ onComplete }: { onComplete: () => void }) {
   const visiblePosts = Math.floor((progress / 100) * posts.length);
 
   return (
-    <div className="bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden transition-all duration-700">
-      {/* Calendar Header */}
+    <div className="bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden">
       <div className="border-b border-gray-100 px-6 py-4 bg-gray-50/50">
         <div className="flex items-center justify-between">
-          <h3 className="font-semibold text-gray-900">Content Calendar</h3>
+          <h3 className="font-semibold text-gray-900" style={{ fontFamily: 'var(--font-geist-sans)' }}>
+            Content Calendar
+          </h3>
           <span className="text-sm text-gray-500">September 7-11, 2026</span>
         </div>
       </div>
-
-      {/* Calendar Grid */}
       <div className="p-6">
-        {/* Days of Week */}
         <div className="grid grid-cols-5 gap-2 mb-4">
-          {days.map((day, i) => (
-            <div
-              key={day}
-              className={`text-center text-xs font-medium py-1.5 rounded ${
-                i === 0
-                  ? 'bg-[#e6fff5] text-[#00f0a1]'
-                  : 'text-gray-500'
-              }`}
-            >
+          {['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].map((day, i) => (
+            <div key={day} className={`text-center text-xs font-medium py-1.5 rounded ${i === 0 ? 'bg-[#e6fff5] text-[#00f0a1]' : 'text-gray-500'}`}>
               {day}
             </div>
           ))}
         </div>
-
-        {/* Posts Container - FIXED HEIGHT */}
         <div className="space-y-2 min-h-[160px]">
           {visiblePosts === 0 ? (
             <div className="flex items-center justify-center h-[160px] text-gray-400">
@@ -71,22 +60,12 @@ function CalendarAnimation({ onComplete }: { onComplete: () => void }) {
             </div>
           ) : (
             posts.slice(0, visiblePosts).map((post, i) => (
-              <div
-                key={i}
-                className="flex items-center justify-between p-3 bg-gray-50 rounded-lg border border-gray-100 animate-slideIn"
-                style={{ animationDelay: `${i * 150}ms` }}
-              >
+              <div key={i} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg border border-gray-100 animate-slideIn" style={{ animationDelay: `${i * 150}ms` }}>
                 <div className="flex items-center gap-4">
                   <span className="text-xs font-mono text-gray-500 w-14">{post.time}</span>
                   <span className="text-sm font-medium text-gray-700">{post.platform}</span>
                 </div>
-                <span
-                  className={`text-xs px-2.5 py-1 rounded ${
-                    post.status === 'Published'
-                      ? 'bg-emerald-100 text-emerald-700'
-                      : 'bg-amber-100 text-amber-700'
-                  }`}
-                >
+                <span className={`text-xs px-2.5 py-1 rounded ${post.status === 'Published' ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700'}`}>
                   {post.status}
                 </span>
               </div>
@@ -98,45 +77,37 @@ function CalendarAnimation({ onComplete }: { onComplete: () => void }) {
   );
 }
 
-// ─── Main Hero ──────────────────────────────────────────────────
+// ─── Hero ─────────────────────────────────────────────────────────
 
-export default function Home() {
+export default function Hero() {
   const [showAnimation, setShowAnimation] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   const handleAnimationComplete = () => {
-    // Wait 500ms for the animation to finish, then switch to static image
-    setTimeout(() => {
-      setShowAnimation(false);
-    }, 500);
+    setTimeout(() => setShowAnimation(false), 500);
   };
+
+  const platforms = [
+    'LinkedIn', 'X', 'Bluesky', 'Reddit',
+    'Indie Hackers', 'Threads', 'Posts', 'Case Studies', 'Replies'
+  ];
 
   return (
     <div className="min-h-screen bg-[#f0fffa]">
       {/* Header */}
       <header className="border-b border-gray-200 bg-white/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <span className="text-md font-extrabold text-gray-900" style={{fontFamily: "Plus Jakarta Sans, Arial, Helvetica, sans-serif"}}>
-            <Image
-              src="/dispatchOS-logo.png"
-              alt="DispatchOS Logo"
-              width={32}
-              height={32}
-              className="inline-block mr-2"
-            
-            />
+          <span className="text-xl font-bold text-gray-900" style={{ fontFamily: 'var(--font-geist-sans)' }}>
             DispatchOS
           </span>
           <nav className="flex items-center gap-6">
-            <a href="#features" className="text-sm text-gray-600 hover:text-gray-900">
-              Features
-            </a>
-            <a href="#pricing" className="text-sm text-gray-600 hover:text-gray-900">
-              Pricing
-            </a>
-            <a
-              href="https://app.dispatchos.com"
-              className="px-4 py-2 bg-[#00f0a1] text-gray-900 text-sm font-medium rounded-lg hover:bg-[#00d48a] transition"
-            >
+            <a href="#features" className="text-sm text-gray-600 hover:text-gray-900">Features</a>
+            <a href="#pricing" className="text-sm text-gray-600 hover:text-gray-900">Pricing</a>
+            <a href="https://app.dispatchos.com" className="px-4 py-2 bg-[#00f0a1] text-gray-900 text-sm font-medium rounded-lg hover:bg-[#00d48a] transition">
               Go to App
             </a>
           </nav>
@@ -146,67 +117,74 @@ export default function Home() {
       {/* Hero Section */}
       <section className="py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-4">
-          {/* Headline */}
-
           <div className="text-center max-w-3xl mx-auto mb-12">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full mb-6 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-[#00f0a1] animate-pulse"></span>
+              <span className="text-xs font-medium text-gray-600 tracking-wide" style={{ fontFamily: 'var(--font-geist-mono)' }}>
+                AI-POWERED · ALWAYS ON
+              </span>
+            </div>
+
             {/* Headline */}
-            <span className="text-2xl md:text-3xl font-medium text-gray-900 mb-2 block" style={{fontFamily: "Plus Jakarta Sans, Arial, Helvetica, sans-serif"}} >
-              No More Content <span className="text-[#00f0a]">Brainstorming</span>
-            </span>
-            
-            {/* Sub-headline */}
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
-              Your AI Marketing <span className="text-[#00f0a]">Cofounder</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'var(--font-geist-sans)' }}>
+              Post more, <span className="text-[#00f0a1]">think less.</span>
             </h1>
-            
-            {/* Benefit line */}
-            <p className="text-md text-gray-900 mt-6 mb-6">
-              ⚡ Put your content generation and publishing on auto-pilot — <br className="hidden sm:block" />
-              in less than <span className="font-semibold txt-[#00f0a1]">5 minutes</span>.
+
+            {/* Sub-headline */}
+            <p className="text-lg md:text-xl text-gray-600 mb-8">
+              One engine. Every channel. AI-powered content that runs on autopilot.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
               <a
                 href="https://app.dispatchos.com"
-                className="px-8 py-3 bg-[#00f0a1] text-gray-900 font-medium rounded-lg hover:bg-[#00d48a] transition shadow-lg shadow-[#00f0a1]/25"
+                className="px-8 py-3 bg-[#171717] text-gray-50 font-medium rounded-lg hover:bg-[#00d48a] transition shadow-lg shadow-[#00f0a1]/25"
+                style={{ fontFamily: 'var(--font-geist-sans)' }}
               >
-                Start Posting
+                Start for free
               </a>
               <a
-                href="#pricing"
-                className="px-8 py-3 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition"
+                href="#demo"
+                className="px-8 py-3 bg-[#f8f8f8] border text-gray-700 font-medium rounded-lg hover:bg-gray-100/50 transition flex items-center gap-2"
+                style={{ fontFamily: 'var(--font-geist-sans)' }}
               >
-                See Pricing
+                Watch 2-min demo →
               </a>
             </div>
 
+            {/* Platform Pills */}
+            <div className="flex flex-wrap items-center justify-center max-w-3xl gap-2" style={{ maxWidth: '420px', margin: '0 auto' }}>
+              {platforms.map((platform) => (
+                <span
+                  key={platform}
+                  className="px-3 font-mono py-1 bg-white border border-gray-200 rounded-full text-xs font-medium text-gray-600 shadow-sm"
+                  style={{ fontFamily: 'var(--font-geist-mono)' }}
+                >
+                  {platform}
+                </span>
+              ))}
+            </div>
           </div>
 
-          {/* ─── Visual Container (Fixed Dimensions) ────────────── */}
-          <div className="max-w-5xl mx-auto">
-            {showAnimation ? (
-              <CalendarAnimation onComplete={handleAnimationComplete} />
-            ) : (
-              <div className="rounded-xl border border-gray-200 shadow-lg overflow-hidden">
-                <Image
-                  src="/screenshots/calendar.webp"
-                  alt="DispatchOS content calendar with scheduled posts"
-                  width={800}
-                  height={500}
-                  className="w-full h-auto"
-                  priority
-                />
+          {/* Calendar Visual */}
+          <div className="max-w-6xl mx-auto">
+            <div className={`transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+              {showAnimation && <CalendarAnimation onComplete={handleAnimationComplete} />}
+              <div className={`transition-opacity duration-700 ${showAnimation ? 'opacity-0 h-0 overflow-hidden' : 'opacity-100'}`}>
+                <div className="rounded-xl border border-gray-200 shadow-lg overflow-hidden">
+                  <Image
+                    src="/screenshots/calendar.webp"
+                    alt="DispatchOS content calendar"
+                    width={800}
+                    height={500}
+                    className="w-full h-auto"
+                    priority
+                  />
+                </div>
               </div>
-            )}
-          </div>
-
-          {/* Social Proof */}
-          <div className="mt-8 text-center text-sm text-gray-500">
-            <span className="inline-flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#00f0a1] animate-pulse" />
-              Posts publishing right now for Appnomics
-            </span>
+            </div>
           </div>
         </div>
       </section>
