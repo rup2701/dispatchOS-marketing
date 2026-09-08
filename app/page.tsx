@@ -101,7 +101,8 @@ export default function Hero() {
       {/* Header */}
       <header className="border-b border-gray-200 bg-white/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <span className="text-xl font-bold text-gray-900" style={{ fontFamily: 'var(--font-geist-sans)' }}>
+          <span className="text-md font-bold text-gray-900" style={{ fontFamily: 'var(--font-geist-sans)' }}>
+            <Image src="/dispatchOS-logo.png" alt="DispatchOS Logo" width={32} height={32} className="inline-block mr-2" />
             DispatchOS
           </span>
           <nav className="flex items-center gap-6">
