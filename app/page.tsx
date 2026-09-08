@@ -189,7 +189,7 @@ export default function Home() {
             ) : (
               <div className="rounded-xl border border-gray-200 shadow-lg overflow-hidden">
                 <Image
-                  src="/screenshots/calendar-full.webp"
+                  src="/screenshots/calendar.webp"
                   alt="DispatchOS content calendar with scheduled posts"
                   width={800}
                   height={500}
