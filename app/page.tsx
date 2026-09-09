@@ -117,7 +117,7 @@ export default function Hero() {
       <header className="border-b border-gray-200 bg-white/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <span className="text-md font-extrabold text-gray-950" style={{ fontFamily: 'var("Plus Jakarta Sans")' }}>
-            <Image src="/dispatchOS-logo.svg" alt="DispatchOS Logo" width={132} height={32} className="inline-block mr-2" />
+            <Image src="/dispatchOS-logo.svg" alt="DispatchOS Logo" width={148} height={32} className="inline-block mr-2" />
           </span>
           <nav className="flex items-center gap-6">
             <a href="#features" className="text-sm text-gray-600 hover:text-gray-900">Features</a>
