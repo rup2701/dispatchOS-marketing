@@ -119,13 +119,6 @@ export default function Hero() {
       <section className="py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full mb-6 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-[#00f0a1] animate-pulse"></span>
-              <span className="text-xs font-medium text-gray-600 tracking-wide" style={{ fontFamily: 'var(--font-geist-mono)' }}>
-                AI-POWERED · ALWAYS ON
-              </span>
-            </div>
 
             {/* Headline */}
             <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-4 spacing-[-1em]">
@@ -133,8 +126,8 @@ export default function Hero() {
             </h1>
 
             {/* Sub-headline */}
-            <p className="text-lg md:text-xl font-semibold text-gray-500 mt-8 mb-8">
-              You create, dispatch tells the story. You content on autopilot.
+            <p className="max-w-2xl text-lg md:text-xl font-semibold text-gray-400 mt-8 mb-8 mx-auto text-center">
+              You create, dispatch tells the story. One engine. Every channel. Your content on autopilot.
             </p>
 
             {/* CTAs */}
@@ -151,16 +144,16 @@ export default function Hero() {
                 className="px-8 py-3 bg-[#f8f8f8] border text-gray-700 font-medium rounded-lg hover:bg-gray-100/50 transition flex items-center gap-2"
                 style={{ fontFamily: 'var(--font-geist-sans)' }}
               >
-                Watch 2-min demo →
+                Watch demo
               </a>
             </div>
 
             {/* Platform Pills */}
-            <div className="flex flex-wrap items-center justify-center max-w-3xl gap-2" style={{ maxWidth: '420px', margin: '0 auto' }}>
+            <div className="flex flex-wrap items-center justify-center max-w-2xl gap-2 " style={{ maxWidth: '420px', margin: '0 auto' }}>
               {platforms.map((platform) => (
                 <span
                   key={platform}
-                  className="px-3 font-mono py-1 bg-white border border-gray-200 rounded-full text-xs font-medium text-gray-600 shadow-sm"
+                  className="px-3 font-mono py-1 bg-white border border-gray-500 rounded-full text-xs font-medium text-gray-600 shadow-sm"
                   style={{ fontFamily: 'var(--font-geist-mono)' }}
                 >
                   {platform}

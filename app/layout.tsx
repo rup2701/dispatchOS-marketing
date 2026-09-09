@@ -12,9 +12,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata : Metadata = {
-  title: 'DispatchOS — Your AI Marketing Cofounder',
-  description: 'AI-powered content that runs on autopilot.',
+export const metadata: Metadata = {
+  title: 'DispatchOS — Never wonder what to post again.',
+  description: 'You create. Dispatch tells the story. One engine. Every channel. Your content on autopilot.',
 };
 
 
