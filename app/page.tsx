@@ -15,6 +15,7 @@ function CalendarAnimation({ onComplete }: { onComplete: () => void }) {
     { time: '15:00', platform: 'LinkedIn', status: 'Queued' },
     { time: '17:00', platform: 'Bluesky', status: 'Queued' },
   ];
+  
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -91,11 +92,25 @@ export default function Hero() {
     setTimeout(() => setShowAnimation(false), 500);
   };
 
-  const platforms = [
+  const contentChannels = [
     'LinkedIn', 'X', 'Bluesky', 'Reddit',
-    'Indie Hackers', 'Threads', 'Posts', 'Case Studies', 'Replies'
+    // 'Indie Hackers', 'Threads', 'Posts', 'Case Studies', 'Replies'
   ];
-
+  const contentTypes = ["Threads", "Posts", "Case Studies", "Replies"];
+  function Tag({ children, dim = false }: { children: React.ReactNode; dim?: boolean }) {
+  return (
+    <span
+      className={`inline-block text-[12px] font-medium rounded-full px-2.5 py-0.5 border ${
+        dim
+          ? "text-[#6B6B80] bg-white border-[#E2E2EE]"
+          : "text-[#00a872] bg-[#00f0a110] border-[#00f0a130]"
+      }`}
+      style={{ fontFamily: "'DM Mono', monospace" }}
+    >
+      {children}
+    </span>
+  );
+}
   return (
     <div className="min-h-screen bg-[#f0fffa]">
       {/* Header */}
@@ -149,7 +164,7 @@ export default function Hero() {
 
             {/* Platform Pills */}
             <div className="flex flex-wrap items-center justify-center max-w-2xl gap-2 " style={{ maxWidth: '420px', margin: '0 auto' }}>
-              {platforms.map((platform) => (
+              {contentChannels.map((platform) => (
                 <span
                   key={platform}
                   className="px-3 font-mono py-1 bg-white border border-gray-500 rounded-full text-xs font-medium text-gray-600 shadow-sm"
@@ -158,6 +173,9 @@ export default function Hero() {
                   {platform}
                 </span>
               ))}
+              <div className="flex flex-wrap justify-center gap-2 mt-2" style={{ fontFamily: 'var(--font-geist-mono)' }}>
+                {contentTypes.map(c => <Tag key={c}>{c}</Tag>)}
+              </div>
             </div>
           </div>
 
