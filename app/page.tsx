@@ -8,7 +8,6 @@ import Image from 'next/image';
 
 function CalendarAnimation({ onComplete }: { onComplete: () => void }) {
   const [progress, setProgress] = useState(0);
-  const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
   const posts = [
     { time: '09:00', platform: 'LinkedIn', status: 'Published' },
     { time: '12:00', platform: 'X', status: 'Queued' },
@@ -82,11 +81,8 @@ function CalendarAnimation({ onComplete }: { onComplete: () => void }) {
 
 export default function Hero() {
   const [showAnimation, setShowAnimation] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
+  const [isVisible] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleAnimationComplete = () => {
     setTimeout(() => setShowAnimation(false), 500);
@@ -117,17 +113,47 @@ export default function Hero() {
     <div className="min-h-screen bg-[#f0fffa]">
       {/* Header */}
       <header className="border-b border-gray-200 bg-white/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <span className="text-md font-extrabold text-gray-950" style={{ fontFamily: 'var("Plus Jakarta Sans")' }}>
-            <Image src="/dispatchOS-logo.svg" alt="DispatchOS Logo" width={148} height={32} className="inline-block mr-2" />
-          </span>
-          <nav className="flex items-center gap-6">
-            <a href="#features" className="text-sm text-gray-600 hover:text-gray-900">Features</a>
-            <a href="#pricing" className="text-sm text-gray-600 hover:text-gray-900">Pricing</a>
-            <a href="https://app.dispatchos.com" className="px-4 py-2 bg-[#00f0a1] text-gray-900 text-sm font-medium rounded-lg hover:bg-[#00d48a] transition">
-              Go to App
-            </a>
-          </nav>
+        <div className="max-w-6xl mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <span className="text-md font-extrabold text-gray-950" style={{ fontFamily: 'var("Plus Jakarta Sans")' }}>
+              <Image src="/dispatchOS-logo.svg" alt="DispatchOS Logo" width={148} height={32} className="inline-block mr-2" />
+            </span>
+
+            <nav className="hidden md:flex items-center gap-6">
+              <a href="#features" className="text-sm text-gray-600 hover:text-gray-900">Features</a>
+              <a href="#pricing" className="text-sm text-gray-600 hover:text-gray-900">Pricing</a>
+            </nav>
+
+            <div className="hidden md:flex items-center gap-4">
+              <a href="#pricing" className="text-sm text-gray-600 hover:text-gray-900">Sign in</a>
+              <a href="https://app.dispatchos.com" className="px-4 py-2 bg-[#00f0a1] text-gray-900 text-sm font-medium rounded-lg hover:bg-[#00d48a] transition">
+                Sign up
+              </a>
+            </div>
+
+            <button
+              type="button"
+              className="md:hidden flex flex-col items-center justify-center w-10 h-10 rounded-lg border border-gray-200 bg-white text-gray-900"
+              aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              <span className={`block w-5 h-0.5 bg-current transition-transform duration-200 ${menuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+              <span className={`block w-5 h-0.5 bg-current my-1 transition-opacity duration-200 ${menuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+              <span className={`block w-5 h-0.5 bg-current transition-transform duration-200 ${menuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+            </button>
+          </div>
+
+          {menuOpen && (
+            <nav id="mobile-menu" className="md:hidden pt-4 pb-2 border-t border-gray-200 mt-4 flex flex-col gap-3">
+              <a href="#features" className="text-sm text-gray-600 hover:text-gray-900" onClick={() => setMenuOpen(false)}>Features</a>
+              <a href="#pricing" className="text-sm text-gray-600 hover:text-gray-900" onClick={() => setMenuOpen(false)}>Pricing</a>
+              <a href="#pricing" className="text-sm text-gray-600 hover:text-gray-900" onClick={() => setMenuOpen(false)}>Sign in</a>
+              <a href="https://app.dispatchos.com" className="inline-flex items-center justify-center px-4 py-2 bg-[#00f0a1] text-gray-900 text-sm font-medium rounded-lg hover:bg-[#00d48a] transition" onClick={() => setMenuOpen(false)}>
+                Sign up
+              </a>
+            </nav>
+          )}
         </div>
       </header>
 
@@ -142,7 +168,7 @@ export default function Hero() {
             </h1>
 
             {/* Sub-headline */}
-            <p className="max-w-2xl text-lg md:text-xl font-semibold text-gray-400 mt-8 mb-8 mx-auto text-center">
+            <p className="max-w-2xl text-lg md:text-xl font-semibold text-gray-400 mt-6 mb-6 mx-auto text-center">
               Dispatch turns your work into the story your market needs to hear.
             </p>
           
