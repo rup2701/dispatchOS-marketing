@@ -126,14 +126,14 @@ export default function Hero() {
 
             <div className="hidden md:flex items-center gap-4">
               <a href="#pricing" className="text-sm text-gray-600 hover:text-gray-900">Sign in</a>
-              <a href="https://app.dispatchos.com" className="px-4 py-2 bg-[#00b377] text-gray-900 text-sm font-medium rounded-lg hover:bg-[#008d61] transition">
+              <a href="https://app.dispatchos.com" className="px-4 py-2 bg-[#00b377] text-gray-900 text-sm font-medium rounded-full hover:bg-[#008d61] transition">
                 Sign up
               </a>
             </div>
 
             <button
               type="button"
-              className="md:hidden flex flex-col items-center justify-center w-10 h-10 rounded-lg border border-gray-200 bg-white text-gray-900"
+              className="md:hidden flex flex-col items-center justify-center w-10 h-10 rounded-full border border-gray-200 bg-white text-gray-900"
               aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen(!menuOpen)}
@@ -149,7 +149,7 @@ export default function Hero() {
               <a href="#features" className="text-sm text-gray-600 hover:text-gray-900" onClick={() => setMenuOpen(false)}>Features</a>
               <a href="#pricing" className="text-sm text-gray-600 hover:text-gray-900" onClick={() => setMenuOpen(false)}>Pricing</a>
               <a href="#pricing" className="text-sm text-gray-600 hover:text-gray-900" onClick={() => setMenuOpen(false)}>Sign in</a>
-              <a href="https://app.dispatchos.com" className="inline-flex items-center justify-center px-4 py-2 bg-[#00b377] text-gray-900 text-sm font-medium rounded-lg hover:bg-[#008d61] transition" onClick={() => setMenuOpen(false)}>
+              <a href="https://app.dispatchos.com" className="inline-flex items-center justify-center px-4 py-2 bg-[#00b377] text-gray-900 text-sm font-medium rounded-full hover:bg-[#008d61] transition" onClick={() => setMenuOpen(false)}>
                 Sign up
               </a>
             </nav>
@@ -193,14 +193,14 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
               <a
                 href="https://app.dispatchos.com"
-                className="px-8 py-3 bg-[#171717] text-gray-50 font-medium rounded-lg hover:bg-[#008d61] transition shadow-lg shadow-[#00b377]/25"
+                className="px-8 py-3 bg-[#171717] text-gray-50 font-medium rounded-full hover:bg-[#008d61] transition shadow-lg shadow-[#00b377]/25"
                 style={{ fontFamily: 'var(--font-geist-sans)' }}
               >
                 Start for free
               </a>
               <a
                 href="#demo"
-                className="px-8 py-3 bg-[#f8f8f8] border text-gray-700 font-medium rounded-lg hover:bg-gray-100/50 transition flex items-center gap-2"
+                className="px-8 py-3 bg-[#f8f8f8] border text-gray-700 font-medium rounded-full hover:bg-gray-100/50 transition flex items-center gap-2"
                 style={{ fontFamily: 'var(--font-geist-sans)' }}
               >
                 Watch demo
