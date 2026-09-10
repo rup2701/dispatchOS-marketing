@@ -45,7 +45,7 @@ function CalendarAnimation({ onComplete }: { onComplete: () => void }) {
       <div className="p-6">
         <div className="grid grid-cols-5 gap-2 mb-4">
           {['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].map((day, i) => (
-            <div key={day} className={`text-center text-xs font-medium py-1.5 rounded ${i === 0 ? 'bg-[#e6fff5] text-[#00f0a1]' : 'text-gray-500'}`}>
+            <div key={day} className={`text-center text-xs font-medium py-1.5 rounded ${i === 0 ? 'bg-[#e6fff5] text-[#00b377]' : 'text-gray-500'}`}>
               {day}
             </div>
           ))}
@@ -100,7 +100,7 @@ export default function Hero() {
         className={`inline-block text-[12px] font-medium rounded-full px-2.5 py-0.5 border ${
           dim
             ? "text-[#6B6B80] bg-white border-[#999]"
-            : "text-[#00a872] bg-[#00f0a110] border-[#ddd]"
+            : "text-[#00b377] bg-[#00b37710] border-[#ddd]"
         }`}
         style={{ fontFamily: "'DM Mono', monospace" }}
       >
@@ -126,7 +126,7 @@ export default function Hero() {
 
             <div className="hidden md:flex items-center gap-4">
               <a href="#pricing" className="text-sm text-gray-600 hover:text-gray-900">Sign in</a>
-              <a href="https://app.dispatchos.com" className="px-4 py-2 bg-[#00f0a1] text-gray-900 text-sm font-medium rounded-lg hover:bg-[#00d48a] transition">
+              <a href="https://app.dispatchos.com" className="px-4 py-2 bg-[#00b377] text-gray-900 text-sm font-medium rounded-lg hover:bg-[#008d61] transition">
                 Sign up
               </a>
             </div>
@@ -149,7 +149,7 @@ export default function Hero() {
               <a href="#features" className="text-sm text-gray-600 hover:text-gray-900" onClick={() => setMenuOpen(false)}>Features</a>
               <a href="#pricing" className="text-sm text-gray-600 hover:text-gray-900" onClick={() => setMenuOpen(false)}>Pricing</a>
               <a href="#pricing" className="text-sm text-gray-600 hover:text-gray-900" onClick={() => setMenuOpen(false)}>Sign in</a>
-              <a href="https://app.dispatchos.com" className="inline-flex items-center justify-center px-4 py-2 bg-[#00f0a1] text-gray-900 text-sm font-medium rounded-lg hover:bg-[#00d48a] transition" onClick={() => setMenuOpen(false)}>
+              <a href="https://app.dispatchos.com" className="inline-flex items-center justify-center px-4 py-2 bg-[#00b377] text-gray-900 text-sm font-medium rounded-lg hover:bg-[#008d61] transition" onClick={() => setMenuOpen(false)}>
                 Sign up
               </a>
             </nav>
@@ -193,7 +193,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
               <a
                 href="https://app.dispatchos.com"
-                className="px-8 py-3 bg-[#171717] text-gray-50 font-medium rounded-lg hover:bg-[#00d48a] transition shadow-lg shadow-[#00f0a1]/25"
+                className="px-8 py-3 bg-[#171717] text-gray-50 font-medium rounded-lg hover:bg-[#008d61] transition shadow-lg shadow-[#00b377]/25"
                 style={{ fontFamily: 'var(--font-geist-sans)' }}
               >
                 Start for free
