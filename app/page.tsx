@@ -97,20 +97,22 @@ export default function Hero() {
     // 'Indie Hackers', 'Threads', 'Posts', 'Case Studies', 'Replies'
   ];
   const contentTypes = ["Threads", "Posts", "Case Studies", "Replies"];
+
   function Tag({ children, dim = false }: { children: React.ReactNode; dim?: boolean }) {
-  return (
-    <span
-      className={`inline-block text-[12px] font-medium rounded-full px-2.5 py-0.5 border ${
-        dim
-          ? "text-[#6B6B80] bg-white border-[#E2E2EE]"
-          : "text-[#00a872] bg-[#00f0a110] border-[#00f0a130]"
-      }`}
-      style={{ fontFamily: "'DM Mono', monospace" }}
-    >
-      {children}
-    </span>
-  );
-}
+    return (
+      <span
+        className={`inline-block text-[12px] font-medium rounded-full px-2.5 py-0.5 border ${
+          dim
+            ? "text-[#6B6B80] bg-white border-[#999]"
+            : "text-[#00a872] bg-[#00f0a110] border-[#ddd]"
+        }`}
+        style={{ fontFamily: "'DM Mono', monospace" }}
+      >
+        {children}
+      </span>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-[#f0fffa]">
       {/* Header */}
@@ -141,8 +143,25 @@ export default function Hero() {
 
             {/* Sub-headline */}
             <p className="max-w-2xl text-lg md:text-xl font-semibold text-gray-400 mt-8 mb-8 mx-auto text-center">
-              You create, dispatch tells the story. One engine. Every channel. Your content on autopilot.
+              Dispatch turns your work into the story your market needs to hear.
             </p>
+          
+            {/* Platform Pills */}
+            <div className="flex flex-wrap items-center justify-center max-w-[420px] gap-2 mb-8 mx-auto" >
+               <div className="flex flex-wrap justify-center gap-2  mb-2" style={{ fontFamily: 'var(--font-geist-mono)' }}>
+                {contentTypes.map(c => <Tag key={c}>{c}</Tag>)}
+              </div>
+              {contentChannels.map((platform) => (
+                <span
+                  key={platform}
+                  className="px-3 font-mono py-1 bg-white border border-gray-500 rounded-full text-xs font-medium text-gray-600 shadow-sm"
+                  style={{ fontFamily: 'var(--font-geist-mono)' }}
+                >
+                  {platform}
+                </span>
+              ))}
+             
+            </div>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
@@ -162,21 +181,6 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* Platform Pills */}
-            <div className="flex flex-wrap items-center justify-center max-w-2xl gap-2 " style={{ maxWidth: '420px', margin: '0 auto' }}>
-              {contentChannels.map((platform) => (
-                <span
-                  key={platform}
-                  className="px-3 font-mono py-1 bg-white border border-gray-500 rounded-full text-xs font-medium text-gray-600 shadow-sm"
-                  style={{ fontFamily: 'var(--font-geist-mono)' }}
-                >
-                  {platform}
-                </span>
-              ))}
-              <div className="flex flex-wrap justify-center gap-2 mt-2" style={{ fontFamily: 'var(--font-geist-mono)' }}>
-                {contentTypes.map(c => <Tag key={c}>{c}</Tag>)}
-              </div>
-            </div>
           </div>
 
           {/* Calendar Visual */}
