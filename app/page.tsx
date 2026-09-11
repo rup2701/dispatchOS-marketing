@@ -168,8 +168,8 @@ export default function Hero() {
             </h1>
 
             {/* Sub-headline */}
-            <p className="max-w-2xl text-lg md:text-xl font-semibold text-gray-400 mt-6 mb-6 mx-auto text-center">
-              Dispatch turns your work into the story your market needs to hear.
+            <p className="max-w-2xl text-lg md:text-md  text-gray-900 mt-8 mb-8 mx-auto text-center">
+              Dispatch turns your work into <em><b>stories</b></em> your market wants to hear.
             </p>
           
             {/* Platform Pills */}
