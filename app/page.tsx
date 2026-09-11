@@ -116,7 +116,7 @@ export default function Hero() {
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <span className="text-md font-extrabold text-gray-950" style={{ fontFamily: 'var("Plus Jakarta Sans")' }}>
-              <Image src="/dispatchOS-logo.svg" alt="DispatchOS Logo" width={148} height={32} className="inline-block mr-2" />
+              <Image src="/dispatchOS-logo.svg" alt="DispatchOS Logo" width={132} height={32} className="inline-block mr-2" />
             </span>
 
             <nav className="hidden md:flex items-center gap-6">
