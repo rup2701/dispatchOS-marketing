@@ -112,7 +112,7 @@ export default function Hero() {
   return (
     <div className="min-h-screen bg-[#f0fffa]">
       {/* Header */}
-      <header className="border-b border-gray-200 bg-white/80 backdrop-blur-sm sticky top-0 z-10">
+      <header className="fixed bg-white/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <span className="text-md font-extrabold text-gray-950" style={{ fontFamily: 'var("Plus Jakarta Sans")' }}>
@@ -193,14 +193,14 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
               <a
                 href="https://app.dispatchos.com"
-                className="px-8 py-3 bg-[#171717] text-gray-50 font-medium rounded-full hover:bg-[#008d61] transition shadow-lg shadow-[#00b377]/25"
+                className="px-12 py-4 bg-[#00b377] text-gray-900 font-bold rounded-full hover:bg-[#008d61] transition shadow-lg shadow-[#00b377]/25"
                 style={{ fontFamily: 'var(--font-geist-sans)' }}
               >
                 Start for free
               </a>
               <a
                 href="#demo"
-                className="px-8 py-3 bg-[#f8f8f8] border text-gray-700 font-medium rounded-full hover:bg-gray-100/50 transition flex items-center gap-2"
+                className="px-12 py-4 bg-[#d4f2e8] border text-gray-700 font-bold rounded-full hover:bg-gray-100/50 transition flex items-center gap-2"
                 style={{ fontFamily: 'var(--font-geist-sans)' }}
               >
                 Watch demo
