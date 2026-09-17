@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Faq from '@/components/Faq';
 import FinalCta from '@/components/FinalCta';
+import Footer from '@/components/Footer';
 import Pricing from '@/components/Pricing';
 import SplitSections from '@/components/Sections';
 
@@ -237,6 +238,7 @@ export default function Hero() {
       <Pricing />
       <Faq />
       <FinalCta />
+      <Footer />
     </div>
   );
 }

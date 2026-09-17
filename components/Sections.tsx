@@ -10,7 +10,7 @@ const sections = [
   },
   
   { title: "Tell Interesting Stories", description: "Zero blank-page syndrome. Get a full batch of channel-tailored posts built for technical builders and founders.", image: "/screenshots/ai-gen.png" },
-  { title: "The Visual Calendar", description: "Total control. Tweak copy inline, swap media assets, or build custom posts from scratch with a frictionless UI.", image: "/screenshots/calendar.png" },
+  { title: "The Calendar", description: "Total control. Tweak copy inline, swap media assets, or build custom posts from scratch with a frictionless UI.", image: "/screenshots/calendar.png" },
   { title: "Hands-Free Auto-Sender", description: "Set it and forget it. Reliable, automated publishing across platforms so your distribution runs while you code.", image: "/screenshots/scheduler.png" },
   { title: "The Analytics Loop", description: "Real feedback loops to see what resonates and continuously sharpen your GTM motion.", image: "/screenshots/analytics.png" },
 ];
@@ -30,7 +30,7 @@ export default function SplitSections() {
             >
               {/* Text Column */}
               <div className={`space-y-4 ${isReversed ? 'lg:order-2' : 'lg:order-1'} ${isAeoRow ? 'lg:max-w-[75%]' : ''}`}>
-                <h3 className="text-5xl font-bold tracking-tight">{section.title}</h3>
+                <h3 className="text-5xl font-extrabold tracking-tight">{section.title}</h3>
                 <p className="text-gray-900 text-lg leading-relaxed">{section.description}</p>
               </div>
 
