@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import SplitSections from '@/components/Sections';
 
 // ─── Calendar Animation ──────────────────────────────────────────
 
@@ -112,11 +113,11 @@ export default function Hero() {
   return (
     <div className="min-h-screen bg-[#f0fffa]">
       {/* Header */}
-      <header className="fixed bg-white/80 backdrop-blur-sm sticky top-0 z-10">
+      <header className="border-b border-gray-200 bg-white/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <span className="text-md font-extrabold text-gray-950" style={{ fontFamily: 'var("Plus Jakarta Sans")' }}>
-              <Image src="/dispatchOS-logo.svg" alt="DispatchOS Logo" width={132} height={32} className="inline-block mr-2" />
+              <Image src="/dispatchOS-logo.svg" alt="DispatchOS Logo" width={148} height={32} className="inline-block mr-2" />
             </span>
 
             <nav className="hidden md:flex items-center gap-6">
@@ -159,7 +160,7 @@ export default function Hero() {
 
       {/* Hero Section */}
       <section className="py-16 md:py-20">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-8-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
 
             {/* Headline */}
@@ -168,8 +169,8 @@ export default function Hero() {
             </h1>
 
             {/* Sub-headline */}
-            <p className="max-w-2xl text-lg md:text-md  text-gray-900 mt-8 mb-8 mx-auto text-center">
-              Dispatch turns your work into <em><b>stories</b></em> your market wants to hear.
+            <p className="max-w-2xl text-lg md:text-xl font-semibold text-gray-400 mt-6 mb-6 mx-auto text-center">
+              Dispatch turns your work into the story your market needs to hear.
             </p>
           
             {/* Platform Pills */}
@@ -193,14 +194,14 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
               <a
                 href="https://app.dispatchos.com"
-                className="px-12 py-4 bg-[#00b377] text-gray-900 font-bold rounded-full hover:bg-[#008d61] transition shadow-lg shadow-[#00b377]/25"
+                className="px-8 py-3 bg-[#171717] text-gray-50 font-medium rounded-full hover:bg-[#008d61] transition shadow-lg shadow-[#00b377]/25"
                 style={{ fontFamily: 'var(--font-geist-sans)' }}
               >
                 Start for free
               </a>
               <a
                 href="#demo"
-                className="px-12 py-4 bg-[#d4f2e8] border text-gray-700 font-bold rounded-full hover:bg-gray-100/50 transition flex items-center gap-2"
+                className="px-8 py-3 bg-[#f8f8f8] border text-gray-700 font-medium rounded-full hover:bg-gray-100/50 transition flex items-center gap-2"
                 style={{ fontFamily: 'var(--font-geist-sans)' }}
               >
                 Watch demo
@@ -229,6 +230,7 @@ export default function Hero() {
           </div>
         </div>
       </section>
+      <SplitSections />
     </div>
   );
 }
