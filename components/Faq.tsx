@@ -43,22 +43,21 @@ const faqs = [
 
 export default function Faq() {
   return (
-    <section id="faq" className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
+    <section id="faq" className="mx-auto max-w-3xl px-4 py-24 sm:px-6 lg:px-8">
       <div className="mb-10 text-left">
-        {/* <p className="text-sm font-medium uppercase tracking-[0.18em] text-[#00b377]">FAQ</p> */}
-        <h2 className="mt-4 font-extrabold text-3xl font-bold tracking-tight text-gray-950 text-center sm:text-4xl">
+        <h2 className="mt-4 text-center text-3xl font-black tracking-tight text-gray-950 sm:text-4xl">
           FAQ
         </h2>
       </div>
 
-      <div className="divide-y divide-gray-200 border-y border-gray-200">
+      <div className="overflow-hidden rounded-2xl border border-gray-900 bg-white">
         {faqs.map((faq) => (
-          <details key={faq.question} className="group py-5">
-            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-base font-medium text-gray-900 sm:text-lg">
+          <details key={faq.question} className="group border-b border-gray-900 last:border-b-0">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-left text-base font-bold text-gray-900 sm:text-lg">
               <span>{faq.question}</span>
-              <span className="text-2xl leading-none text-gray-400 transition group-open:rotate-45">+</span>
+              <span className="text-2xl leading-none text-gray-700 transition group-open:rotate-45">+</span>
             </summary>
-            <p className="mt-3 max-w-3xl text-base leading-7 text-gray-600">{faq.answer}</p>
+            <p className="px-5 pb-5 text-base leading-7 text-gray-700">{faq.answer}</p>
           </details>
         ))}
       </div>
