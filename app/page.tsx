@@ -4,6 +4,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Faq from '@/components/Faq';
+import FinalCta from '@/components/FinalCta';
 import Pricing from '@/components/Pricing';
 import SplitSections from '@/components/Sections';
 
@@ -235,6 +236,7 @@ export default function Hero() {
       <SplitSections />
       <Pricing />
       <Faq />
+      <FinalCta />
     </div>
   );
 }
