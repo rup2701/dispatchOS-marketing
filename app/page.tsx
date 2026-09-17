@@ -4,6 +4,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Faq from '@/components/Faq';
+import Pricing from '@/components/Pricing';
 import SplitSections from '@/components/Sections';
 
 // ─── Calendar Animation ──────────────────────────────────────────
@@ -232,6 +233,7 @@ export default function Hero() {
         </div>
       </section>
       <SplitSections />
+      <Pricing />
       <Faq />
     </div>
   );
