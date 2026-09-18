@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 const sections = [
+  { title: "Tell Interesting Stories", description: "Zero blank-page syndrome. Get a full batch of channel-tailored posts built for technical builders and founders.", image: "/screenshots/ai-gen.png" },
   { title: "The Context Engine", description: "Drop in your website link, and our AI instantly maps your product description and ICP.", image: "/screenshots/context.png" },
   {
     title: "AEO Audit",
@@ -8,8 +9,6 @@ const sections = [
     image: "/screenshots/context.png",
     preview: "audit",
   },
-  
-  { title: "Tell Interesting Stories", description: "Zero blank-page syndrome. Get a full batch of channel-tailored posts built for technical builders and founders.", image: "/screenshots/ai-gen.png" },
   { title: "The Calendar", description: "Total control. Tweak copy inline, swap media assets, or build custom posts from scratch with a frictionless UI.", image: "/screenshots/calendar.png" },
   { title: "Hands-Free Auto-Sender", description: "Set it and forget it. Reliable, automated publishing across platforms so your distribution runs while you code.", image: "/screenshots/scheduler.png" },
   { title: "The Analytics Loop", description: "Real feedback loops to see what resonates and continuously sharpen your GTM motion.", image: "/screenshots/analytics.png" },
