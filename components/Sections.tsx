@@ -18,7 +18,7 @@ const sections = [
 export default function SplitSections() {
   return (
     <section className="py-24 max-w-7xl mx-auto px-6">
-      <div className="space-y-56 lg:space-y-64">
+      <div className="space-y-24 sm:space-y-40 lg:space-y-64">
         {sections.map((section, idx) => {
           const isReversed = idx % 2 === 1;
           const isAeoRow = section.preview === 'audit';
@@ -30,7 +30,7 @@ export default function SplitSections() {
             >
               {/* Text Column */}
               <div className={`space-y-4 ${isReversed ? 'lg:order-2' : 'lg:order-1'} ${isAeoRow ? 'lg:max-w-[75%]' : ''}`}>
-                <h3 className="text-5xl font-extrabold tracking-tight">{section.title}</h3>
+                <h3 className="text-[30px] font-extrabold leading-[1.05] tracking-tight sm:text-[36px] lg:text-5xl">{section.title}</h3>
                 <p className="text-gray-900 text-lg leading-relaxed">{section.description}</p>
               </div>
 
