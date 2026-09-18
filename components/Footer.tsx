@@ -28,7 +28,7 @@ const companyLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-gray-200 bg-white">
+    <footer className="bg-[#eefeee]">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="rounded-2xl border border-gray-200 bg-gray-50/60 px-4 py-4 sm:px-6">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -54,8 +54,8 @@ export default function Footer() {
 
         <div className="mt-12 grid gap-10 md:grid-cols-4">
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-gray-500">Product</h3>
-            <ul className="mt-4 space-y-3 text-sm text-gray-700">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-gray-900">Product</h3>
+            <ul className="mt-4 space-y-3 text-sm text-gray-900">
               {productLinks.map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="hover:text-gray-950">{link.label}</a>
@@ -65,8 +65,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-gray-500">Use cases</h3>
-            <ul className="mt-4 space-y-3 text-sm text-gray-700">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-gray-900">Use cases</h3>
+            <ul className="mt-4 space-y-3 text-sm text-gray-900">
               {useCases.map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="hover:text-gray-950">{link.label}</a>
@@ -76,8 +76,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-gray-500">Resources</h3>
-            <ul className="mt-4 space-y-3 text-sm text-gray-700">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-gray-900">Resources</h3>
+            <ul className="mt-4 space-y-3 text-sm text-gray-900">
               {resources.map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="hover:text-gray-950">{link.label}</a>
@@ -87,8 +87,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-gray-500">Company</h3>
-            <ul className="mt-4 space-y-3 text-sm text-gray-700">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-gray-900">Company</h3>
+            <ul className="mt-4 space-y-3 text-sm text-gray-900">
               {companyLinks.map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="hover:text-gray-950">{link.label}</a>
