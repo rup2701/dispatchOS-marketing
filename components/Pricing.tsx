@@ -94,7 +94,7 @@ export default function Pricing() {
               </p>
               <ul className={`mt-4 space-y-3 text-sm leading-6 ${tier.popular ? 'text-gray-200' : 'text-gray-700'}`}>
                 {tier.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2">
+                  <li key={feature} className="flex items-center gap-2">
                     <span className={`mt-1 inline-block h-1.5 w-1.5 rounded-full ${tier.popular ? 'bg-[#7ef5c3]' : 'bg-gray-900'}`} />
                     <span>{feature}</span>
                   </li>
