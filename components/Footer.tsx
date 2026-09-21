@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const productLinks = [
   { label: 'How it works', href: '#features' },
   { label: 'Calendar / Staging', href: '#features' },
@@ -30,10 +32,11 @@ export default function Footer() {
   return (
     <footer className="bg-[#eefeee]">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="rounded-2xl border border-gray-200 bg-gray-50/60 px-4 py-4 sm:px-6">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <Image src="/dispatchOS-logo.svg" alt="DispatchOS Logo" width={132} height={32} className="inline-block  mb-2" />
+      <p className="text-xs font-medium uppercase tracking-[0.16em] text-gray-500">AI drafts → you approve → it ships.</p>
+        <div className=" hidden rounded-2xl border border-gray-200 bg-gray-50/60 px-4 py-4 sm:px-6">
+          <div className=" flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <p className="text-sm font-medium uppercase tracking-[0.16em] text-gray-500">AI drafts → you approve → it ships.</p>
             </div>
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
               <a
