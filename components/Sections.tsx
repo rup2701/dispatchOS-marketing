@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 const sections = [
-  { title: "Tell Interesting Stories", description: "Zero blank-page syndrome. Get a full batch of channel-tailored posts built for technical builders and founders.", image: "/screenshots/ai-gen.png" },
+  { title: "Tell interesting stories!", description: "Zero blank-page syndrome. Get a full batch of channel-tailored posts built for technical builders and founders.", image: "/screenshots/ai-gen@2x.png" },
   { title: "The Context Engine", description: "Drop in your website link, and our AI instantly maps your product description and ICP.", image: "/screenshots/context.png" },
   {
     title: "AEO Audit",
@@ -10,8 +10,8 @@ const sections = [
     preview: "audit",
   },
   { title: "The Calendar", description: "Total control. Tweak copy inline, swap media assets, or build custom posts from scratch with a frictionless UI.", image: "/screenshots/calendar.png" },
-  { title: "Hands-Free Auto-Sender", description: "Set it and forget it. Reliable, automated publishing across platforms so your distribution runs while you code.", image: "/screenshots/scheduler.png" },
-  { title: "The Analytics Loop", description: "Real feedback loops to see what resonates and continuously sharpen your GTM motion.", image: "/screenshots/analytics.png" },
+  { title: "Hands-Free Auto-Sender", description: "Set it and forget it. Reliable, automated publishing across platforms so your distribution runs while you code.", image: "/screenshots/scheduler@2x.png" },
+  // { title: "The Analytics Loop", description: "Real feedback loops to see what resonates and continuously sharpen your GTM motion.", image: "/screenshots/analytics.png" },
 ];
 
 export default function SplitSections() {
@@ -25,16 +25,16 @@ export default function SplitSections() {
           return (
             <div
               key={idx}
-              className={`grid items-center gap-8 lg:gap-16 ${isAeoRow ? 'lg:grid-cols-[1fr_1fr]' : isReversed ? 'lg:grid-cols-[2fr_1fr]' : 'lg:grid-cols-[1fr_2fr]'}`}
+              className={`grid items-center gap-8 lg:gap-16 ${isAeoRow ? 'lg:grid-cols-[1fr_1fr]' : isReversed ? 'lg:grid-cols-[1.5fr_1fr]' : 'lg:grid-cols-[1fr_1.5fr]'}`}
             >
               {/* Text Column */}
               <div className={`space-y-4 ${isReversed ? 'lg:order-2' : 'lg:order-1'} ${isAeoRow ? 'lg:max-w-[75%]' : ''}`}>
-                <h3 className="text-[30px] font-extrabold leading-[1.05] tracking-tight sm:text-[36px] lg:text-5xl">{section.title}</h3>
+                <h3 className="text-[30px] font-extrabold leading-[1.05] tracking-tight sm:text-[36px] lg:text-4xl">{section.title}</h3>
                 <p className="text-gray-900 text-lg leading-relaxed">{section.description}</p>
               </div>
 
               {/* Screenshot / Visual Card Column */}
-              <div className={`w-full bg-zinc-900 border border-zinc-800 rounded-2xl p-2 shadow-2xl overflow-hidden ${isReversed ? 'lg:order-1' : 'lg:order-2'} ${isAeoRow ? '' : ''}`}>
+              <div className={`w-full bg[#eefeee]  rounded-2xl p-2 shadow2xl overflow-hidden ${isReversed ? 'lg:order-1' : 'lg:order-2'} ${isAeoRow ? '' : ''}`}>
                 {section.preview === 'audit' ? (
                   <div className="rounded-[18px] border-[1.5px] border-[#f0f0f0] bg-[#1c1f23] p-0 font-mono text-[#f4f4f4] shadow-[0_0_0_1px_rgba(255,255,255,0.1)] text-[11px] sm:text-[12px]">
                     <div className="border-b border-[#f0f0f0] px-5 py-3 font-medium tracking-tight text-[#f4f4f4]">
@@ -113,9 +113,9 @@ export default function SplitSections() {
                   <Image
                     src={section.image}
                     alt={section.title}
-                    width={1200}
-                    height={800}
-                    className="rounded-xl w-full h-auto object-cover border border-zinc-800/50"
+                    width={528}
+                    height={325}
+                    className="rounded-xl w-full h-auto object-cover  border-zinc-800/50"
                   />
                 )}
               </div>
