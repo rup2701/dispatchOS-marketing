@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const sections = [
   { title: "Tell interesting stories!", description: "Zero blank-page syndrome. Get a full batch of channel-tailored posts built for technical builders and founders.", image: "/screenshots/ai-gen@2x.png" },
-  { title: "The Context Engine", description: "Drop in your website link, and our AI instantly maps your product description and ICP.", image: "/screenshots/context.png" },
+  { title: "The Context Engine", description: "Drop in your website link, and our AI instantly maps your product description and ICP.", image: "/screenshots/context@2x.png" },
   {
     title: "AEO Audit",
     description: "See exactly how AI interprets your brand with a live AEO audit that highlights the gaps before a single demo request.",
@@ -11,7 +11,7 @@ const sections = [
   },
   { title: "The Calendar", description: "Total control. Tweak copy inline, swap media assets, or build custom posts from scratch with a frictionless UI.", image: "/screenshots/calendar.png" },
   { title: "Hands-Free Auto-Sender", description: "Set it and forget it. Reliable, automated publishing across platforms so your distribution runs while you code.", image: "/screenshots/scheduler@2x.png" },
-  // { title: "The Analytics Loop", description: "Real feedback loops to see what resonates and continuously sharpen your GTM motion.", image: "/screenshots/analytics.png" },
+  { title: "The Analytics Loop", description: "Real feedback loops to see what resonates and continuously sharpen your GTM motion.", image: "/screenshots/analytics@2x.png" },
 ];
 
 export default function SplitSections() {
@@ -34,7 +34,7 @@ export default function SplitSections() {
               </div>
 
               {/* Screenshot / Visual Card Column */}
-              <div className={`w-full bg[#eefeee]  rounded-2xl p-2 shadow2xl overflow-hidden ${isReversed ? 'lg:order-1' : 'lg:order-2'} ${isAeoRow ? '' : ''}`}>
+              <div className={`w-full bg-[#eefeee] md:py-[40px] rounded-2xl p-2 md:p-12 shadow-xs overflow-hidden ${isReversed ? 'lg:order-1' : 'lg:order-2'} ${isAeoRow ? '' : ''}`}>
                 {section.preview === 'audit' ? (
                   <div className="rounded-[18px] border-[1.5px] border-[#f0f0f0] bg-[#1c1f23] p-0 font-mono text-[#f4f4f4] shadow-[0_0_0_1px_rgba(255,255,255,0.1)] text-[11px] sm:text-[12px]">
                     <div className="border-b border-[#f0f0f0] px-5 py-3 font-medium tracking-tight text-[#f4f4f4]">
