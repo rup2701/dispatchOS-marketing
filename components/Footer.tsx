@@ -16,9 +16,9 @@ const resources = [
 ];
 
 const companyLinks = [
-  { label: 'About', href: '#features' },
+  { label: 'About', href: '/about' },
   { label: 'Contact', href: '#features' },
-  { label: 'Login', href: 'https://app.dispatchos.com' },
+  { label: 'Login', href: 'https://app.dispatchos.dev/login' },
   { label: 'Pricing', href: '/pricing' },
 ];
 
