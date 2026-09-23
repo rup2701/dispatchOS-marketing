@@ -16,7 +16,7 @@ const sections = [
 
 export default function SplitSections() {
   return (
-    <section className="py-24 max-w-7xl mx-auto px-6">
+    <section className="py-28 sm:py-32 lg:py-36 max-w-7xl mx-auto px-6">
       <div className="space-y-24 sm:space-y-40 lg:space-y-64">
         {sections.map((section, idx) => {
           const isReversed = idx % 2 === 1;

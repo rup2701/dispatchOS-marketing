@@ -189,6 +189,73 @@ export default function Hero() {
           </div>
         </div>
       </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
+        <div className="mx-auto max-w-4xl text-center">
+          <span className="inline-flex rounded-full border border-[#8ae0c5] bg-[#eafef4] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0f9a6d]">
+            WHERE THE POSTS COME FROM
+          </span>
+
+          <h2 className="mt-8 text-4xl font-black tracking-[-0.04em] text-gray-950 sm:text-3xl lg:text-[2.8rem] lg:leading-[1.02]">
+            Not generic AI. Your product,<br className="hidden sm:block" />
+            your voice, your context.
+          </h2>
+
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
+            Every post is generated from sources you control. No hallucinations from the open web — just your knowledge, systematised.
+          </p>
+        </div>
+
+        <div className="mt-16 grid gap-6 lg:grid-cols-3">
+          {[
+            {
+              title: 'YOUR SOURCES',
+              items: [
+                { icon: '🌐', label: 'Website scrape', detail: 'Landing pages, docs, changelog' },
+                { icon: '💬', label: 'Onboarding answers', detail: 'ICP, tone, benefits, proof' },
+                { icon: '📄', label: 'Uploaded docs', detail: 'PDF, DOCX, Notion exports' },
+              ],
+            },
+            {
+              title: 'YOUR KNOBS',
+              items: [
+                { icon: '🎯', label: 'Topical modifiers', detail: 'Weekly themes, launches, features' },
+                { icon: '📝', label: 'Tone & voice preset', detail: 'Casual, technical, founder-led' },
+                { icon: '📡', label: 'Channel selection', detail: 'X, LinkedIn, Reddit, Bluesky, IH' },
+              ],
+            },
+            {
+              title: 'YOUR OUTPUTS',
+              items: [
+                { icon: '📅', label: 'Weekly calendar', detail: 'Full week drafted & ready to review' },
+                { icon: '✍️', label: 'Daily posts & threads', detail: 'Channel-native format per platform' },
+                { icon: '🔄', label: 'Repurposed variants', detail: 'One idea → 5 platform-specific posts' },
+              ],
+            },
+          ].map((column) => (
+            <div key={column.title} className="rounded-[28px] border border-[#dfeae3] bg-[#f7f9f7] p-6 sm:p-7">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0f9a6d]">
+                {column.title}
+              </p>
+
+              <div className="mt-6 space-y-6">
+                {column.items.map((item) => (
+                  <div key={item.label} className="flex items-start gap-3">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#edfdf5] text-lg">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <p className="text-lg font-semibold text-gray-900">{item.label}</p>
+                      <p className="mt-1 text-sm leading-6 text-gray-600">{item.detail}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <SplitSections />
       <Faq />
       <FinalCta />
