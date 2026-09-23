@@ -1,6 +1,6 @@
 export default function FinalCta() {
   return (
-    <section className="mx-auto w-[90vw] max-w-[1600px] px-4 py-24 sm:w-[80vw] sm:px-6 lg:px-8">
+    <section className="mx-auto w-[90vw] max-w-[1600px] px-4 py-28 sm:w-[80vw] sm:px-6 sm:py-32 lg:px-8 lg:py-36">
       <div className="rounded-[28px] border border-[#b7e8d0]  px-6 py-10 text-center text-gray-950 sm:px-10 lg:px-14">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#008d61]">
           Start shipping content

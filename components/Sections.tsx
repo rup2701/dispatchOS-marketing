@@ -9,7 +9,7 @@ const sections = [
     image: "/screenshots/context.png",
     preview: "audit",
   },
-  { title: "The Calendar", description: "Total control. Tweak copy inline, swap media assets, or build custom posts from scratch with a frictionless UI.", image: "/screenshots/calendar.png" },
+  { title: "The Calendar", description: "Total control. Tweak copy inline, swap media assets, or build custom posts from scratch with a frictionless UI.", image: "/screenshots/calendar-edit.webp" },
   { title: "Hands-Free Auto-Sender", description: "Set it and forget it. Reliable, automated publishing across platforms so your distribution runs while you code.", image: "/screenshots/scheduler@2x.png" },
   { title: "The Analytics Loop", description: "Real feedback loops to see what resonates and continuously sharpen your GTM motion.", image: "/screenshots/analytics@2x.png" },
 ];
@@ -21,6 +21,28 @@ export default function SplitSections() {
         {sections.map((section, idx) => {
           const isReversed = idx % 2 === 1;
           const isAeoRow = section.preview === 'audit';
+          const isCalendarRow = section.title === 'The Calendar';
+
+          if (isCalendarRow) {
+            return (
+              <div key={idx} className="mx-auto w-full max-w-6xl">
+                <div className="mx-auto max-w-3xl text-center">
+                  <h3 className="text-[30px] font-extrabold leading-[1.05] tracking-tight sm:text-[36px] lg:text-5xl">{section.title}</h3>
+                  <p className="mt-4 text-lg leading-relaxed text-gray-900">{section.description}</p>
+                </div>
+
+                <div className="mt-10 overflow-hidden rounded-[28px] bg-[#eafef4] p-2 shadow-[0_10px_28px_rgba(15,23,42,0.06)] ring-1 ring-[#cdeedd]">
+                  <Image
+                    src={section.image}
+                    alt={section.title}
+                    width={1400}
+                    height={860}
+                    className="w-full rounded-[20px] object-cover shadow-[0_10px_24px_rgba(15,23,42,0.08)]"
+                  />
+                </div>
+              </div>
+            );
+          }
 
           return (
             <div
