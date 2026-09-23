@@ -67,8 +67,8 @@ export default function Pricing() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-3xl text-center">
-        <h2 className="text-[2.8rem] font-black tracking-tight text-gray-950 sm:text-[2.8rem] leading-[1.02]">
-          Simple. Transparent pricing.
+        <h2 className="text-[2.8rem] font-black tracking-[-0.05em] text-gray-950 leading-[0.98] sm:text-[2.8rem]">
+          Simple pricing for a real content engine.
         </h2>
       </div>
 
@@ -138,7 +138,7 @@ export default function Pricing() {
           <span className="inline-flex rounded-full border border-[#8ae0c5] bg-[#eafef4] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0f9a6d]">
             DispatchOS vs the alternatives
           </span>
-          <h2 className="mt-6 text-[2.8rem] font-black tracking-tight text-gray-950 leading-[1.02] sm:text-[2.8rem]">
+          <h2 className="mt-6 text-[2.8rem] font-black tracking-[-0.05em] text-gray-950 leading-[0.98] sm:text-[2.8rem]">
             Why DispatchOS?
           </h2>
           <p className="mt-4 text-lg text-gray-600">
@@ -184,7 +184,7 @@ export default function Pricing() {
 
       <div className="mt-28 py-16 sm:py-24">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-[2.8rem] font-black tracking-tight text-gray-950 leading-[1.02] sm:text-[2.8rem]">
+          <h2 className="text-[2.8rem] font-black tracking-[-0.05em] text-gray-950 leading-[0.98] sm:text-[2.8rem]">
             See what each plan unlocks.
           </h2>
           <p className="mt-3 text-base text-gray-600">
