@@ -67,7 +67,7 @@ export default function Pricing() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-3xl text-center">
-        <h2 className="text-3xl font-black tracking-tight text-gray-950 sm:text-5xl">
+        <h2 className="text-[2.8rem] font-black tracking-tight text-gray-950 sm:text-[2.8rem] leading-[1.02]">
           Simple. Transparent pricing.
         </h2>
       </div>
@@ -133,9 +133,58 @@ export default function Pricing() {
         ))}
       </div>
 
-      <div className="mt-16 py-16 sm:py-24">
+      <div className="mt-28 py-12 sm:py-16">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-black tracking-tight text-gray-950 sm:text-4xl">
+          <span className="inline-flex rounded-full border border-[#8ae0c5] bg-[#eafef4] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0f9a6d]">
+            DispatchOS vs the alternatives
+          </span>
+          <h2 className="mt-6 text-[2.8rem] font-black tracking-tight text-gray-950 leading-[1.02] sm:text-[2.8rem]">
+            Why DispatchOS?
+          </h2>
+          <p className="mt-4 text-lg text-gray-600">
+            Schedulers post what you write. Ghostwriters write expensively and slowly. DispatchOS does both — from your product context.
+          </p>
+        </div>
+
+        <div className="mt-10 overflow-hidden rounded-[28px] border border-gray-200 bg-[#f7faf8]">
+          <div className="grid grid-cols-4 border-b border-gray-200 bg-[#eefeee] text-left text-[11px] font-semibold uppercase tracking-[0.14em] text-gray-600">
+            <div className="px-5 py-4">Feature</div>
+            <div className="px-5 py-4">Schedulers</div>
+            <div className="px-5 py-4">Ghostwriter</div>
+            <div className="px-5 py-4 text-[#0f9a6d]">DispatchOS</div>
+          </div>
+
+          <div className="divide-y divide-gray-200 text-sm text-gray-700">
+            {[
+              ['You write the content', '✓', '—', '—'],
+              ['Product-accurate by default', '—', 'sometimes', '✓'],
+              ['Costs < $200/mo', '✓', '—', '✓'],
+              ['Scales with your velocity', '—', '—', '✓'],
+              ['HITL approval before publish', '—', '✓', '✓'],
+              ['Learns your voice over time', '—', 'manually', '✓'],
+              ['Zero writing time required', '—', '✓', '✓'],
+              ['Set up in < 10 minutes', '✓', '—', '✓'],
+            ].map(([label, scheduler, ghostwriter, dispatch]) => (
+              <div key={label} className="grid grid-cols-4 items-center">
+                <div className="px-5 py-4 font-medium text-gray-900">{label}</div>
+                <div className="px-5 py-4 text-center">
+                  {scheduler === '✓' ? <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#dff8ed] text-[#0a9c66] text-xs font-bold">✓</span> : scheduler === '—' ? <span className="text-gray-400">—</span> : <span className="text-gray-500">{scheduler}</span>}
+                </div>
+                <div className="px-5 py-4 text-center">
+                  {ghostwriter === '✓' ? <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#dff8ed] text-[#0a9c66] text-xs font-bold">✓</span> : ghostwriter === '—' ? <span className="text-gray-400">—</span> : <span className="text-gray-500">{ghostwriter}</span>}
+                </div>
+                <div className="px-5 py-4 text-center">
+                  {dispatch === '✓' ? <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#dff8ed] text-[#0a9c66] text-xs font-bold">✓</span> : dispatch === '—' ? <span className="text-gray-400">—</span> : <span className="text-gray-500">{dispatch}</span>}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-28 py-16 sm:py-24">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-[2.8rem] font-black tracking-tight text-gray-950 leading-[1.02] sm:text-[2.8rem]">
             See what each plan unlocks.
           </h2>
           <p className="mt-3 text-base text-gray-600">
