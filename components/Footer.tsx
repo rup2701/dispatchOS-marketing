@@ -10,6 +10,7 @@ const productLinks = [
 
 const resources = [
   { label: 'FAQ', href: '#faq' },
+  { label: 'Help & Support', href: '/help' },
   { label: 'Changelog', href: '#features' },
   { label: 'AEO Audit', href: '#features' },
 ];
