@@ -30,7 +30,7 @@ const companyLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#eefeee]">
+    <footer className="bg-[#eefeee]" style={{ fontFamily: 'var(--font-geist-sans)' }}>
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       <Image src="/dispatchOS-logo.svg" alt="DispatchOS Logo" width={132} height={32} className="inline-block  mb-2" />
       <p className="text-xs font-medium uppercase tracking-[0.16em] text-gray-500">AI drafts → you approve → it ships.</p>

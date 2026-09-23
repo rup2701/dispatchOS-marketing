@@ -106,7 +106,7 @@ export default function Hero() {
             ? "text-[#6B6B80] bg-white border-[#999]"
             : "text-[#00b377] bg-[#00b37710] border-[#ddd]"
         }`}
-        style={{ fontFamily: "'DM Mono', monospace" }}
+        style={{ fontFamily: 'var(--font-geist-mono)' }}
       >
         {children}
       </span>
