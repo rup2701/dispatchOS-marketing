@@ -6,7 +6,6 @@ import Image from 'next/image';
 import Faq from '@/components/Faq';
 import FinalCta from '@/components/FinalCta';
 import Footer from '@/components/Footer';
-import Pricing from '@/components/Pricing';
 import SplitSections from '@/components/Sections';
 
 // ─── Calendar Animation ──────────────────────────────────────────
@@ -126,11 +125,11 @@ export default function Hero() {
 
             <nav className="hidden md:flex items-center gap-6">
               <a href="#features" className="text-sm text-gray-600 hover:text-gray-900">Features</a>
-              <a href="#pricing" className="text-sm text-gray-600 hover:text-gray-900">Pricing</a>
+              <a href="/pricing" className="text-sm text-gray-600 hover:text-gray-900">Pricing</a>
             </nav>
 
             <div className="hidden md:flex items-center gap-4">
-              <a href="#pricing" className="text-sm text-gray-600 hover:text-gray-900">Sign in</a>
+              <a href="https://app.dispatchos.com" className="text-sm text-gray-600 hover:text-gray-900">Sign in</a>
               <a href="https://app.dispatchos.com" className="px-4 py-2 bg-[#00b377] text-gray-900 text-sm font-medium rounded-full hover:bg-[#008d61] transition">
                 Sign up
               </a>
@@ -152,8 +151,8 @@ export default function Hero() {
           {menuOpen && (
             <nav id="mobile-menu" className="md:hidden pt-4 pb-2 border-t border-gray-200 mt-4 flex flex-col gap-3">
               <a href="#features" className="text-sm text-gray-600 hover:text-gray-900" onClick={() => setMenuOpen(false)}>Features</a>
-              <a href="#pricing" className="text-sm text-gray-600 hover:text-gray-900" onClick={() => setMenuOpen(false)}>Pricing</a>
-              <a href="#pricing" className="text-sm text-gray-600 hover:text-gray-900" onClick={() => setMenuOpen(false)}>Sign in</a>
+              <a href="/pricing" className="text-sm text-gray-600 hover:text-gray-900" onClick={() => setMenuOpen(false)}>Pricing</a>
+              <a href="https://app.dispatchos.com" className="text-sm text-gray-600 hover:text-gray-900" onClick={() => setMenuOpen(false)}>Sign in</a>
               <a href="https://app.dispatchos.com" className="inline-flex items-center justify-center px-4 py-2 bg-[#00b377] text-gray-900 text-sm font-medium rounded-full hover:bg-[#008d61] transition" onClick={() => setMenuOpen(false)}>
                 Sign up
               </a>
@@ -235,7 +234,6 @@ export default function Hero() {
         </div>
       </section>
       <SplitSections />
-      <Pricing />
       <Faq />
       <FinalCta />
       <Footer />

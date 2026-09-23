@@ -3,7 +3,7 @@ export default function FinalCta() {
     <section className="mx-auto w-[90vw] max-w-[1600px] px-4 py-24 sm:w-[80vw] sm:px-6 lg:px-8">
       <div className="rounded-[28px] border border-gray-900 bg-gray-950 px-6 py-10 text-center text-white shadow-[0_20px_60px_rgba(0,0,0,0.12)] sm:px-10 lg:px-14">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#7ef5c3]">
-          // start shipping content
+          Start shipping content
         </p>
 
         <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-4xl">
@@ -22,7 +22,7 @@ export default function FinalCta() {
             Start for free
           </a>
           <a
-            href="#pricing"
+            href="/pricing"
             className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
           >
             See pricing

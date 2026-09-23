@@ -4,7 +4,7 @@ const productLinks = [
   { label: 'How it works', href: '#features' },
   { label: 'Calendar / Staging', href: '#features' },
   { label: 'Channels', href: '#features' },
-  { label: 'Roadmap', href: '#pricing' },
+  { label: 'Roadmap', href: '/pricing' },
 ];
 
 const useCases = [
@@ -25,7 +25,7 @@ const companyLinks = [
   { label: 'About', href: '#features' },
   { label: 'Contact', href: '#features' },
   { label: 'Login', href: 'https://app.dispatchos.com' },
-  { label: 'Pricing', href: '#pricing' },
+  { label: 'Pricing', href: '/pricing' },
 ];
 
 export default function Footer() {
@@ -46,7 +46,7 @@ export default function Footer() {
                 Generate my first week
               </a>
               <a
-                href="#pricing"
+                href="/pricing"
                 className="inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition hover:bg-gray-100"
               >
                 Pricing

@@ -48,9 +48,21 @@ const tiers = [
   },
 ];
 
+const comparisonRows = [
+  ['Live Monday–Friday calendar', 'Yes', 'Yes', 'Yes'],
+  ['Weekly content generation', 'Yes', 'Higher limits', 'Highest limits'],
+  ['Per-post editing', 'Yes', 'Yes', 'Yes'],
+  ['Hold, drop, and queue controls', 'Yes', 'Yes', 'Yes'],
+  ['Multi-channel publishing', 'Yes', 'Yes', 'Yes'],
+  ['Analytics feedback loop', 'Yes', 'Yes', 'Yes'],
+  ['Products/workspaces', '1', '3', '5'],
+  ['Threads and variants', 'Basic', 'Included', 'Included'],
+  ['Source uploads', 'Later-defined', '10/month', 'Higher limit'],
+];
+
 export default function Pricing() {
   return (
-    <section id="pricing" className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
+    <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="text-3xl font-black tracking-tight text-gray-950 sm:text-5xl">
           Pricing that feels like a cheat code.
@@ -65,16 +77,16 @@ export default function Pricing() {
         {tiers.map((tier) => (
           <div
             key={tier.name}
-            className={`rounded-3xl border p-6 shadow-sm transition ${
+            className={`flex h-full flex-col rounded-3xl border p-6 shadow-sm transition ${
               tier.popular
-                ? 'border-gray-900 bg-gray-950 text-white shadow-lg shadow-black/10'
+                ? 'border-[#00b377] bg-[#e6fff5] text-gray-950 shadow-lg shadow-[#00b377]/10'
                 : 'border-gray-200 bg-white text-gray-900'
             }`}
           >
             <div className="flex items-center justify-between gap-3">
               <h3 className="text-2xl font-bold">{tier.name}</h3>
               {tier.popular && (
-                <span className="rounded-full bg-white/10 px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-[#dffdf0]">
+                <span className="rounded-full bg-[#00b377] px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-gray-950">
                   Most popular
                 </span>
               )}
@@ -84,44 +96,76 @@ export default function Pricing() {
               <span className="text-4xl font-black tracking-tight">{tier.price}</span>
             </div>
 
-            <p className={`mt-5 text-base leading-7 ${tier.popular ? 'text-gray-200' : 'text-gray-600'}`}>
+            <p className="mt-5 text-base leading-7 text-gray-600">
               {tier.description}
             </p>
 
             <div className="mt-8">
-              <p className={`text-sm font-semibold uppercase tracking-[0.12em] ${tier.popular ? 'text-gray-200' : 'text-gray-500'}`}>
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-gray-500">
                 Includes
               </p>
-              <ul className={`mt-4 space-y-3 text-sm leading-6 ${tier.popular ? 'text-gray-200' : 'text-gray-700'}`}>
+              <ul className="mt-4 space-y-3 text-sm leading-6 text-gray-700">
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex items-center gap-2">
-                    <span className={`mt-1 inline-block h-1.5 w-1.5 rounded-full ${tier.popular ? 'bg-[#7ef5c3]' : 'bg-gray-900'}`} />
+                    <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[#00b377]" />
                     <span>{feature}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className={`mt-8 rounded-2xl border px-4 py-3 text-sm ${tier.popular ? 'border-white/10 bg-white/5 text-gray-200' : 'border-gray-200 bg-gray-50 text-gray-700'}`}>
+            <div className="mt-8 rounded-2xl border border-gray-200 bg-white/70 px-4 py-3 text-sm text-gray-700">
               <span className="font-semibold">RAG / uploads:</span> {tier.uploads}
             </div>
 
-            <button
-              type="button"
-              className={`mt-8 w-full rounded-full px-5 py-3 text-sm font-semibold transition ${
-                tier.popular
-                  ? 'bg-[#00b377] text-gray-950 hover:bg-[#00c885]'
-                  : 'bg-gray-900 text-white hover:bg-gray-700'
-              }`}
-            >
-              {tier.cta}
-            </button>
+            <div className="mt-auto pt-8">
+              <button
+                type="button"
+                className="w-full rounded-full bg-gray-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-gray-700"
+              >
+                {tier.cta}
+              </button>
 
-            <p className={`mt-4 text-center text-sm ${tier.popular ? 'text-gray-300' : 'text-gray-500'}`}>
-              {tier.microcopy}
-            </p>
+              <p className="mt-4 text-center text-sm text-gray-500">
+                {tier.microcopy}
+              </p>
+            </div>
           </div>
         ))}
+      </div>
+
+      <div className="mt-16 py-16 sm:py-24">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl font-black tracking-tight text-gray-950 sm:text-4xl">
+            See what each plan unlocks.
+          </h2>
+          <p className="mt-3 text-base text-gray-600">
+            A quick view of the workflow and limits included at every level.
+          </p>
+        </div>
+
+        <div className="mt-8 overflow-x-auto rounded-2xl border border-gray-200 bg-white">
+          <table className="min-w-[720px] w-full border-collapse text-left text-sm">
+            <thead className="bg-[#eefeee] text-gray-950">
+              <tr>
+                <th scope="col" className="px-5 py-4 font-semibold">Capability</th>
+                <th scope="col" className="px-5 py-4 font-semibold">Starter</th>
+                <th scope="col" className="px-5 py-4 font-semibold">Pro</th>
+                <th scope="col" className="px-5 py-4 font-semibold">Agency</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-100 text-gray-700">
+              {comparisonRows.map(([capability, starter, pro, agency]) => (
+                <tr key={capability}>
+                  <th scope="row" className="px-5 py-4 font-medium text-gray-950">{capability}</th>
+                  <td className="px-5 py-4">{starter}</td>
+                  <td className="px-5 py-4">{pro}</td>
+                  <td className="px-5 py-4">{agency}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
   );
