@@ -11,7 +11,8 @@ const tiers = [
       'Basic analytics',
     ],
     uploads: '1 upload / month (Phase 2)',
-    cta: 'Start Starter',
+    cta: 'Get Started',
+    href: 'https://app.dispatchos.dev/signup?plan=starter',
     microcopy: 'Cancel anytime.',
     popular: false,
   },
@@ -28,6 +29,7 @@ const tiers = [
     ],
     uploads: '10 uploads / month (Phase 2)',
     cta: 'Go Pro',
+    href: 'https://app.dispatchos.dev/signup?plan=pro',
     microcopy: 'Best for serious build-in-public.',
     popular: true,
   },
@@ -43,6 +45,7 @@ const tiers = [
     ],
     uploads: 'Unlimited (Phase 2)',
     cta: 'Start Agency',
+    href: 'https://app.dispatchos.dev/signup?plan=agency',
     microcopy: 'Built for multi-brand workflows.',
     popular: false,
   },
@@ -65,12 +68,8 @@ export default function Pricing() {
     <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="text-3xl font-black tracking-tight text-gray-950 sm:text-5xl">
-          Pricing that feels like a cheat code.
+          Simple. Transparent pricing.
         </h2>
-        <p className="mt-4 text-lg text-gray-600">
-          Less than a dollar a day to never think about content again.
-        </p>
-        <p className="mt-3 text-sm font-medium text-[#00b377]">First 100 users get $29/mo forever.</p>
       </div>
 
       <div className="mt-14 grid gap-6 lg:grid-cols-3">
@@ -119,12 +118,12 @@ export default function Pricing() {
             </div>
 
             <div className="mt-auto pt-8">
-              <button
-                type="button"
-                className="w-full rounded-full bg-gray-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-gray-700"
+              <a
+                href={tier.href}
+                className="inline-flex w-full items-center justify-center rounded-full bg-gray-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-gray-700"
               >
                 {tier.cta}
-              </button>
+              </a>
 
               <p className="mt-4 text-center text-sm text-gray-500">
                 {tier.microcopy}
