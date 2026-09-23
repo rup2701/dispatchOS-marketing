@@ -7,15 +7,8 @@ const productLinks = [
   { label: 'Roadmap', href: '/pricing' },
 ];
 
-const useCases = [
-  { label: 'Shipping updates', href: '#features' },
-  { label: 'Feature launch week', href: '#features' },
-  { label: 'Build-in-public recap', href: '#features' },
-  { label: 'Customer stories', href: '#features' },
-];
 
 const resources = [
-  { label: 'Examples gallery', href: '#features' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Changelog', href: '#features' },
   { label: 'AEO Audit', href: '#features' },
@@ -31,7 +24,7 @@ const companyLinks = [
 export default function Footer() {
   return (
     <footer className="bg-[#eefeee]" style={{ fontFamily: 'var(--font-geist-sans)' }}>
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
       <Image src="/dispatchOS-logo.svg" alt="DispatchOS Logo" width={132} height={32} className="inline-block  mb-2" />
       <p className="text-xs font-medium uppercase tracking-[0.16em] text-gray-500">AI drafts → you approve → it ships.</p>
         <div className=" hidden rounded-2xl border border-gray-200 bg-gray-50/60 px-4 py-4 sm:px-6">
@@ -55,22 +48,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 grid gap-10 md:grid-cols-4">
+        <div className="mt-12 grid gap-10 md:grid-cols-3">
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-gray-900">Product</h3>
             <ul className="mt-4 space-y-3 text-sm text-gray-900">
               {productLinks.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} className="hover:text-gray-950">{link.label}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-gray-900">Use cases</h3>
-            <ul className="mt-4 space-y-3 text-sm text-gray-900">
-              {useCases.map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="hover:text-gray-950">{link.label}</a>
                 </li>
