@@ -21,7 +21,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-geist-sans);
+  font-family: var(--font-plus-jakarta);
+  letter-spacing: -0.025em !important;
 }
 
 @keyframes slideIn {

@@ -41,7 +41,7 @@ function CalendarAnimation({ onComplete }: { onComplete: () => void }) {
     <div className="bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden">
       <div className="border-b border-gray-100 px-6 py-4 bg-gray-50/50">
         <div className="flex items-center justify-between">
-          <h3 className="font-semibold text-gray-900" style={{ fontFamily: 'var(--font-geist-sans)' }}>
+          <h3 className="font-semibold text-gray-900" style={{ fontFamily: 'var(--font-plus-jakarta)' }}>
             Content Calendar
           </h3>
           <span className="text-sm text-gray-500">September 7-11, 2026</span>
