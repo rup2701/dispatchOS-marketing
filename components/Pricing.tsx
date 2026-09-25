@@ -65,34 +65,34 @@ const comparisonRows = [
 
 export default function Pricing() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
+    <section className="mx-auto max-w-[1400px] px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-3xl text-center">
-        <h2 className="text-[2.8rem] font-black tracking-[-0.05em] text-gray-950 leading-[0.98] sm:text-[2.8rem]">
+        <h1 className="text-[2.2rem] font-black tracking-[-0.025em] text-gray-950 leading-[0.98] sm:text-[2.8rem]">
           Simple pricing for a real content engine.
-        </h2>
+        </h1>
       </div>
 
-      <div className="mt-14 grid gap-6 lg:grid-cols-3">
+      <div className="mx-auto mt-14 grid max-w-[1440px] border border-gray-200 bg-white lg:grid-cols-3">
         {tiers.map((tier) => (
           <div
             key={tier.name}
-            className={`flex h-full flex-col rounded-3xl border p-6 shadow-sm transition ${
+            className={`flex h-full flex-col border-b border-gray-200 p-6 last:border-b-0 lg:border-b-0 lg:border-r lg:last:border-r-0 ${
               tier.popular
-                ? 'border-[#00b377] bg-[#e6fff5] text-gray-950 shadow-lg shadow-[#00b377]/10'
-                : 'border-gray-200 bg-white text-gray-900'
+                ? 'bg-[#e6fff5] text-gray-950'
+                : 'bg-white text-gray-900'
             }`}
           >
             <div className="flex items-center justify-between gap-3">
-              <h3 className="text-2xl font-bold">{tier.name}</h3>
+              <h3 className="text-xl font-bold">{tier.name}</h3>
               {tier.popular && (
-                <span className="rounded-full bg-[#00b377] px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-gray-950">
+                <span className="rounded-full bg-[#00b37720] px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-gray-950">
                   Most popular
                 </span>
               )}
             </div>
 
             <div className="mt-6 flex items-end gap-2">
-              <span className="text-4xl font-black tracking-tight">{tier.price}</span>
+              <span className="text-5xl font-regular tracking-tight">{tier.price}</span>
             </div>
 
             <p className="mt-5 text-base leading-7 text-gray-600">
@@ -103,7 +103,7 @@ export default function Pricing() {
               <p className="text-sm font-semibold uppercase tracking-[0.12em] text-gray-500">
                 Includes
               </p>
-              <ul className="mt-4 space-y-3 text-sm leading-6 text-gray-700">
+              <ul className="mt-4 space-y-3 text-md leading-6 text-gray-700">
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex items-center gap-2">
                     <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[#00b377]" />
@@ -120,14 +120,10 @@ export default function Pricing() {
             <div className="mt-auto pt-8">
               <a
                 href={tier.href}
-                className="inline-flex w-full items-center justify-center rounded-full bg-gray-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-gray-700"
+                className="inline-flex w-fit items-center justify-center rounded-full bg-gray-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-gray-700"
               >
                 {tier.cta}
               </a>
-
-              <p className="mt-4 text-center text-sm text-gray-500">
-                {tier.microcopy}
-              </p>
             </div>
           </div>
         ))}
