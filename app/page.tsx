@@ -123,7 +123,7 @@ export default function Hero() {
           <div className="text-center max-w-3xl mx-auto mb-12">
 
             {/* Headline */}
-            <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-4 spacing-[-1em]">
+            <h1 className="homepage-hero-heading text-4xl md:text-6xl font-extrabold text-gray-900 mb-4 spacing-[-1em]">
               Never wonder what to post again.
             </h1>
 
