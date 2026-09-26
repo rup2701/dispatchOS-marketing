@@ -88,8 +88,8 @@ export default function Footer() {
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
             <span>© 2026 DispatchOS</span>
             <a href="/privacy" className="hover:text-gray-900">Privacy</a>
-            <a href="#" className="hover:text-gray-900">Terms</a>
-            <a href="#" className="hover:text-gray-900">Security</a>
+            <a href="/terms" className="hover:text-gray-900">Terms</a>
+            <a href="/security" className="hover:text-gray-900">Security</a>
             <a href="#" className="hover:text-gray-900">Status</a>
           </div>
 
