@@ -87,7 +87,7 @@ export default function Footer() {
         <div className="mt-12 flex flex-col gap-4 border-t border-gray-200 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
             <span>© 2026 DispatchOS</span>
-            <a href="#" className="hover:text-gray-900">Privacy</a>
+            <a href="/privacy" className="hover:text-gray-900">Privacy</a>
             <a href="#" className="hover:text-gray-900">Terms</a>
             <a href="#" className="hover:text-gray-900">Security</a>
             <a href="#" className="hover:text-gray-900">Status</a>
