@@ -1,4 +1,5 @@
 import Footer from '@/components/Footer';
+import BugReportForm from '@/components/BugReportForm';
 import TopNav from '@/components/TopNav';
 
 export const metadata = {
@@ -56,43 +57,10 @@ export default function ContactPage() {
             <div className="max-w-2xl">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#008d61]">Bug report</p>
               <h2 className="mt-4 text-4xl font-black leading-tight tracking-[-0.05em] text-gray-950 sm:text-5xl">Tell us what happened.</h2>
-              <p className="mt-5 text-lg leading-8 text-gray-700">The form opens your email client with the details you provide. Please do not include passwords, API keys, access tokens, or other secrets.</p>
+              <p className="mt-5 text-lg leading-8 text-gray-700">Send the details directly to the DispatchOS team. Please do not include passwords, API keys, access tokens, or other secrets.</p>
             </div>
 
-            <form action={`mailto:${supportEmail}`} method="post" encType="text/plain" className="mt-10 space-y-6 rounded-[28px] border border-[#dfeae3] bg-white/80 p-6 sm:p-8">
-              <input type="hidden" name="subject" value="DispatchOS bug report" />
-
-              <div className="grid gap-6 sm:grid-cols-2">
-                <label className="grid gap-2 text-sm font-semibold text-gray-900">
-                  Your email
-                  <input required type="email" name="email" placeholder="you@example.com" className="rounded-xl border border-gray-300 bg-white px-4 py-3 font-normal text-gray-900 outline-none transition focus:border-[#00b377] focus:ring-2 focus:ring-[#00b377]/20" />
-                </label>
-                <label className="grid gap-2 text-sm font-semibold text-gray-900">
-                  Where did it happen?
-                  <input required type="text" name="area" placeholder="Calendar, Settings, publishing..." className="rounded-xl border border-gray-300 bg-white px-4 py-3 font-normal text-gray-900 outline-none transition focus:border-[#00b377] focus:ring-2 focus:ring-[#00b377]/20" />
-                </label>
-              </div>
-
-              <label className="grid gap-2 text-sm font-semibold text-gray-900">
-                What happened?
-                <textarea required name="description" rows={5} placeholder="Describe the issue and what you expected to happen." className="resize-y rounded-xl border border-gray-300 bg-white px-4 py-3 font-normal leading-7 text-gray-900 outline-none transition focus:border-[#00b377] focus:ring-2 focus:ring-[#00b377]/20" />
-              </label>
-
-              <div className="grid gap-6 sm:grid-cols-2">
-                <label className="grid gap-2 text-sm font-semibold text-gray-900">
-                  Steps to reproduce
-                  <textarea name="steps" rows={4} placeholder="1. Open...&#10;2. Click...&#10;3. See..." className="resize-y rounded-xl border border-gray-300 bg-white px-4 py-3 font-normal leading-7 text-gray-900 outline-none transition focus:border-[#00b377] focus:ring-2 focus:ring-[#00b377]/20" />
-                </label>
-                <label className="grid gap-2 text-sm font-semibold text-gray-900">
-                  Browser or device
-                  <textarea name="environment" rows={4} placeholder="Chrome on macOS, Safari on iPhone..." className="resize-y rounded-xl border border-gray-300 bg-white px-4 py-3 font-normal leading-7 text-gray-900 outline-none transition focus:border-[#00b377] focus:ring-2 focus:ring-[#00b377]/20" />
-                </label>
-              </div>
-
-              <button type="submit" className="inline-flex items-center justify-center rounded-full bg-[#00b377] px-6 py-3 text-sm font-semibold text-gray-950 transition hover:bg-[#00c885]">
-                Open email draft
-              </button>
-            </form>
+            <BugReportForm />
           </section>
 
           <aside className="h-fit rounded-[28px] border border-[#b7e8d0] bg-[#e6fff5] p-6 sm:p-8 lg:sticky lg:top-28">
