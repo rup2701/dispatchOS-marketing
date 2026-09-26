@@ -1,5 +1,10 @@
 const faqs = [
   {
+    question: 'What type of content does DispatchOS generate?',
+    answer:
+      'DispatchOS currently generates short-form posts designed for Reddit, LinkedIn, X, and Bluesky. Each draft is shaped for the channel, then placed in your weekly calendar for review.',
+  },
+  {
     question: 'What is DispatchOS?',
     answer:
       'DispatchOS turns your product context (your website + onboarding inputs) into a weekly content calendar, then drafts posts you can review, edit, and schedule.',
@@ -15,9 +20,14 @@ const faqs = [
       'It’s grounded in your website plus what you provide (ICP + tone + positioning). The goal is product reality → usable drafts, not generic “AI marketing copy.”',
   },
   {
+    question: 'Which channels are connected and automated?',
+    answer:
+      'LinkedIn and X are connected and fully automated. Bluesky is not connected or automated yet and requires manual copy and paste. Reddit is always manual: DispatchOS prepares the post, and you copy and paste it yourself.',
+  },
+  {
     question: 'Do I have to let it auto-post?',
     answer:
-      'No. You can keep autopublish off and use DispatchOS strictly for planning + drafting. When autopublish is on, you still control what gets queued.',
+      'No. You still review and control every draft. LinkedIn and X can publish automatically after approval, while Bluesky and Reddit remain non-automated for now.',
   },
   {
     question: 'Can I review/edit everything before it goes live?',

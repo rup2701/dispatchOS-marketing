@@ -94,7 +94,6 @@ export default function Hero() {
 
   const contentChannels = [
     'LinkedIn', 'X', 'Bluesky', 'Reddit',
-    // 'Indie Hackers', 'Threads', 'Posts', 'Case Studies', 'Replies'
   ];
   const contentTypes = ["Threads", "Posts", "Case Studies", "Replies"];
 
