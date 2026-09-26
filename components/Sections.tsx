@@ -1,17 +1,18 @@
 import Image from 'next/image';
 
 const sections = [
-  { title: "Tell interesting stories!", description: "Zero blank-page syndrome. Get a full batch of channel-tailored posts built for technical builders and founders.", image: "/screenshots/ai-gen@2x.png" },
-  { title: "The Context Engine", description: "Drop in your website link, and our AI instantly maps your product description and ICP.", image: "/screenshots/context@2x.png" },
+  { id: 'content-generation', title: "Tell interesting stories!", description: "Zero blank-page syndrome. Get a full batch of channel-tailored posts built for technical builders and founders.", image: "/screenshots/ai-gen@2x.png" },
+  { id: 'context-engine', title: "The Context Engine", description: "Drop in your website link, and our AI instantly maps your product description and ICP.", image: "/screenshots/context@2x.png" },
   {
+    id: 'aeo-audit',
     title: "AEO Audit",
     description: "See exactly how AI interprets your brand with a live AEO audit that highlights the gaps before a single demo request.",
     image: "/screenshots/context.png",
     preview: "audit",
   },
-  { title: "The Calendar", description: "Total control. Tweak copy inline, swap media assets, or build custom posts from scratch with a frictionless UI.", image: "/screenshots/calendar-edit.webp" },
-  { title: "Hands-Free Auto-Sender", description: "Set it and forget it. Reliable, automated publishing across platforms so your distribution runs while you code.", image: "/screenshots/scheduler@2x.png" },
-  { title: "The Analytics Loop", description: "Real feedback loops to see what resonates and continuously sharpen your GTM motion.", image: "/screenshots/analytics@2x.png" },
+  { id: 'calendar', title: "The Calendar", description: "Total control. Tweak copy inline, swap media assets, or build custom posts from scratch with a frictionless UI.", image: "/screenshots/calendar-edit.webp" },
+  { id: 'auto-sender', title: "Hands-Free Auto-Sender", description: "Set it and forget it. Reliable, automated publishing across platforms so your distribution runs while you code.", image: "/screenshots/scheduler@2x.png" },
+  { id: 'analytics', title: "The Analytics Loop", description: "Real feedback loops to see what resonates and continuously sharpen your GTM motion.", image: "/screenshots/analytics@2x.png" },
 ];
 
 export default function SplitSections() {
@@ -21,11 +22,11 @@ export default function SplitSections() {
         {sections.map((section, idx) => {
           const isReversed = idx % 2 === 1;
           const isAeoRow = section.preview === 'audit';
-          const isCalendarRow = section.title === 'The Calendar';
+          const isCalendarRow = section.id === 'calendar';
 
           if (isCalendarRow) {
             return (
-              <div key={idx} className="mx-auto w-full max-w-6xl">
+              <div id={section.id} key={section.id} className="scroll-mt-24 mx-auto w-full max-w-6xl">
                 <div className="mx-auto max-w-3xl text-center">
                   <h3 className="text-[30px] font-extrabold leading-[1.05] tracking-tight sm:text-[36px] lg:text-5xl">{section.title}</h3>
                   <p className="mt-4 text-lg leading-relaxed text-gray-900">{section.description}</p>
@@ -46,8 +47,9 @@ export default function SplitSections() {
 
           return (
             <div
-              key={idx}
-              className={`grid items-center gap-8 lg:gap-16 ${isAeoRow ? 'lg:grid-cols-[1fr_1fr]' : isReversed ? 'lg:grid-cols-[1.5fr_1fr]' : 'lg:grid-cols-[1fr_1.5fr]'}`}
+              id={section.id}
+              key={section.id}
+              className={`scroll-mt-24 grid items-center gap-8 lg:gap-16 ${isAeoRow ? 'lg:grid-cols-[1fr_1fr]' : isReversed ? 'lg:grid-cols-[1.5fr_1fr]' : 'lg:grid-cols-[1fr_1.5fr]'}`}
             >
               {/* Text Column */}
               <div className={`space-y-4 ${isReversed ? 'lg:order-2' : 'lg:order-1'} ${isAeoRow ? 'lg:max-w-[75%]' : ''}`}>

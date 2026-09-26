@@ -1,25 +1,25 @@
 import Image from "next/image";
 
 const productLinks = [
-  { label: 'How it works', href: '#features' },
-  { label: 'Calendar / Staging', href: '#features' },
-  { label: 'Channels', href: '#features' },
-  { label: 'Roadmap', href: '/pricing' },
+  { label: 'How it works', href: '/#how-it-works' },
+  { label: 'Calendar / Staging', href: '/#calendar' },
+  { label: 'Channels', href: '/#auto-sender' },
+  { label: 'Pricing', href: '/pricing' },
 ];
 
 
 const resources = [
-  { label: 'FAQ', href: '#faq' },
+  { label: 'FAQ', href: './#faq' },
   { label: 'Help & Support', href: '/help' },
-  { label: 'Changelog', href: '#features' },
-  { label: 'AEO Audit', href: '#features' },
+  { label: 'AEO Audit', href: '/#aeo-audit' },
+  { label: 'Security', href: '/security' },
 ];
 
 const companyLinks = [
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
-  { label: 'Login', href: 'https://app.dispatchos.dev/login' },
-  { label: 'Pricing', href: '/pricing' },
+  { label: 'Privacy', href: '/privacy' },
+  { label: 'Terms', href: '/terms' },
 ];
 
 export default function Footer() {
@@ -35,13 +35,13 @@ export default function Footer() {
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
               <a
                 href="https://app.dispatchos.com"
-                className="inline-flex items-center justify-center rounded-full bg-[#00b377] px-4 py-2 text-sm font-semibold text-gray-950 transition hover:bg-[#00c885]"
+                className="inline-flex items-center justify-center rounded-full bg-[#00b377] px-4 py-2 text-sm font-medium text-gray-950 transition hover:bg-[#00c885]"
               >
                 Generate my first week
               </a>
               <a
                 href="/pricing"
-                className="inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition hover:bg-gray-100"
+                className="inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-900 transition hover:bg-gray-100"
               >
                 Pricing
               </a>
@@ -55,7 +55,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-gray-900">
               {productLinks.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="hover:text-gray-950">{link.label}</a>
+                  <a href={link.href} className="font-medium hover:text-gray-950">{link.label}</a>
                 </li>
               ))}
             </ul>
@@ -66,7 +66,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-gray-900">
               {resources.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="hover:text-gray-950">{link.label}</a>
+                  <a href={link.href} className="font-medium hover:text-gray-950">{link.label}</a>
                 </li>
               ))}
             </ul>
@@ -77,7 +77,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-gray-900">
               {companyLinks.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="hover:text-gray-950">{link.label}</a>
+                  <a href={link.href} className="font-medium hover:text-gray-950">{link.label}</a>
                 </li>
               ))}
             </ul>
@@ -87,15 +87,12 @@ export default function Footer() {
         <div className="mt-12 flex flex-col gap-4 border-t border-gray-200 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
             <span>© 2026 DispatchOS</span>
-            <a href="/privacy" className="hover:text-gray-900">Privacy</a>
-            <a href="/terms" className="hover:text-gray-900">Terms</a>
-            <a href="/security" className="hover:text-gray-900">Security</a>
-            <a href="#" className="hover:text-gray-900">Status</a>
+            <a href="#" className="font-medium hover:text-gray-900">Status</a>
           </div>
 
           <div className="flex items-center gap-4 text-sm text-gray-600">
-            <a href="https://x.com" className="hover:text-gray-900">X</a>
-            <a href="https://linkedin.com" className="hover:text-gray-900">LinkedIn</a>
+            <a href="https://x.com" className="font-medium hover:text-gray-900">X</a>
+            <a href="https://linkedin.com" className="font-medium hover:text-gray-900">LinkedIn</a>
           </div>
         </div>
       </div>
