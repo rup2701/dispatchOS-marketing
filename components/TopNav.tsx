@@ -16,7 +16,8 @@ export default function TopNav() {
           </Link>
 
           <nav className="hidden items-center gap-6 md:flex">
-            <Link href="/#how-it-works" className="text-sm font-medium text-gray-600 hover:text-gray-900">Features</Link>
+            <Link href="/#how-it-works" className="text-sm font-medium text-gray-600 hover:text-gray-900">How it works</Link>
+            <Link href="/#calendar" className="text-sm font-medium text-gray-600 hover:text-gray-900">Calendar</Link>
             <Link href="/pricing" className="text-sm font-medium text-gray-600 hover:text-gray-900">Pricing</Link>
           </nav>
 
@@ -39,7 +40,8 @@ export default function TopNav() {
 
         {menuOpen && (
           <nav id="mobile-menu" className="mt-4 flex flex-col gap-3 border-t border-gray-200 pb-2 pt-4 md:hidden">
-            <Link href="/#how-it-works" className="text-sm font-medium text-gray-600 hover:text-gray-900" onClick={() => setMenuOpen(false)}>Features</Link>
+            <Link href="/#how-it-works" className="text-sm font-medium text-gray-600 hover:text-gray-900" onClick={() => setMenuOpen(false)}>How it works</Link>
+            <Link href="/#calendar" className="text-sm font-medium text-gray-600 hover:text-gray-900" onClick={() => setMenuOpen(false)}>Calendar</Link>
             <Link href="/pricing" className="text-sm font-medium text-gray-600 hover:text-gray-900" onClick={() => setMenuOpen(false)}>Pricing</Link>
             <a href="https://app.dispatchos.dev/login" className="inline-flex items-center justify-center rounded-full border border-[#00b377] bg-[#e6fff5] px-4 py-2 text-sm font-medium text-gray-900 transition hover:bg-[#d6fbea]" onClick={() => setMenuOpen(false)}>Sign in</a>
           </nav>
