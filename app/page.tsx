@@ -196,7 +196,7 @@ export default function Hero() {
           </span>
 
           <h2 className="mt-8 text-4xl font-black tracking-[-0.04em] text-gray-950 sm:text-3xl lg:text-[2.8rem] lg:leading-[1.02]">
-            Not generic AI. Your product,<br className="hidden sm:block" />
+          Your product,<br className="hidden sm:block" />
             your voice, your context.
           </h2>
 
