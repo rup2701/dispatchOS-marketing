@@ -149,17 +149,17 @@ export default function Hero() {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+            <div className="flex flex-col flex-row items-center justify-center gap-4 lg:mb-16">
               <a
-                href="#pricing"
-                className="px-10 py-3.5  bg-[#00b377] text-gray-950 font-medium rounded-full hover:bg-[#008d61] transition  shadow-[#00b377]/25"
+                href="/pricing"
+                className="px-6 py-3 md:px-10 md:py-4  bg-[#00b377] text-gray-950 font-medium rounded-full hover:bg-[#008d61] transition  shadow-[#00b377]/25"
                 style={{ fontFamily: 'var(--font-geist-sans)' }}
               >
                 Get Started
               </a>
               <a
                 href="#demo"
-                className="px-10 py-3.5 bg-[#f8f8f8] border text-gray-700 font-medium rounded-full hover:bg-gray-100/50 transition flex items-center gap-2"
+                className="px-6 py-3 md:px-10 md:py-4 bg-[#f8f8f8] border text-gray-700  font-semibold rounded-full hover:bg-gray-100/50 transition flex items-center gap-2"
                 style={{ fontFamily: 'var(--font-geist-sans)' }}
               >
                 Watch demo

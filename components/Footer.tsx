@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const productLinks = [
   { label: 'How it works', href: '/#how-it-works' },
@@ -26,7 +27,9 @@ export default function Footer() {
   return (
     <footer className="bg-[#eefeee]" style={{ fontFamily: 'var(--font-geist-sans)' }}>
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-      <Image src="/dispatchOS-logo.svg" alt="DispatchOS Logo" width={132} height={32} className="inline-block  mb-2" />
+      <Link href="/">
+        <Image src="/dispatchOS-logo.svg" alt="DispatchOS Logo" width={132} height={32} className="inline-block  mb-2" />
+      </Link>
       <p className="text-xs font-medium uppercase tracking-[0.16em] text-gray-500 md:mb-16">AI drafts → you approve → it ships.</p>
 
         <div className="mt-12 grid gap-10 md:grid-cols-3">
