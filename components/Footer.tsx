@@ -69,7 +69,7 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-gray-200 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap items-center gap-4 text-xs text-gray-600">
-            <span>© 2026 <b>˝DispatchOS</b></span>
+            <span>© 2026 DispatchOS</span>
             {/* <a href="#" className="font-medium hover:text-gray-900">Status</a>÷ */}
           </div>
 
