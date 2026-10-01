@@ -151,15 +151,15 @@ export default function Hero() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
               <a
-                href="https://app.dispatchos.com"
-                className="px-8 py-3 bg-[#171717] text-gray-50 font-medium rounded-full hover:bg-[#008d61] transition shadow-lg shadow-[#00b377]/25"
+                href="#pricing"
+                className="px-10 py-3.5  bg-[#00b377] text-gray-950 font-medium rounded-full hover:bg-[#008d61] transition  shadow-[#00b377]/25"
                 style={{ fontFamily: 'var(--font-geist-sans)' }}
               >
-                Start for free
+                Get Started
               </a>
               <a
                 href="#demo"
-                className="px-8 py-3 bg-[#f8f8f8] border text-gray-700 font-medium rounded-full hover:bg-gray-100/50 transition flex items-center gap-2"
+                className="px-10 py-3.5 bg-[#f8f8f8] border text-gray-700 font-medium rounded-full hover:bg-gray-100/50 transition flex items-center gap-2"
                 style={{ fontFamily: 'var(--font-geist-sans)' }}
               >
                 Watch demo

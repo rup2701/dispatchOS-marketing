@@ -1,10 +1,10 @@
 export default function FinalCta() {
   return (
     <section className="mx-auto w-[90vw] max-w-[1600px] px-4 py-28 sm:w-[80vw] sm:px-6 sm:py-32 lg:px-8 lg:py-36">
-      <div className="rounded-[28px] border border-[#b7e8d0]  px-6 py-10 text-center text-gray-950 sm:px-10 lg:px-14">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#008d61]">
+      <div className="rounded-[28px] border border-[#b7e8d0] bg-[#d6fbea]/25   px-6 py-10 text-center text-gray-950 sm:px-10 lg:px-14 lg:py-16">
+        {/* <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#008d61]">
           Start shipping content
-        </p>
+        </p> */}
 
         <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-4xl">
           Stop staring at a blank calendar.
@@ -17,13 +17,13 @@ export default function FinalCta() {
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
             href="/pricing"
-            className="inline-flex items-center justify-center rounded-full bg-[#00b377] px-6 py-3 text-sm font-semibold text-gray-950 transition hover:bg-[#00c885]"
+            className="inline-flex items-center justify-center rounded-full bg-[#00b377] px-10 py-3.5 text-md font-semibold text-gray-950 transition hover:bg-[#00c885]"
           >
             Get started
           </a>
           <a
             href="https://app.dispatchos.dev/login"
-            className="inline-flex items-center justify-center rounded-full border border-[#00b377] bg-[#e6fff5] px-6 py-3 text-sm font-semibold text-gray-900 transition hover:bg-[#d6fbea]"
+            className="inline-flex items-center justify-center rounded-full border border-[#00b377] bg-[#e6fff5] px-10 py-3.5 text-md font-semibold text-gray-900 transition hover:bg-[#d6fbea]"
           >
             Sign in
           </a>

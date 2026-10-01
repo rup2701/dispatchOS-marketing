@@ -27,27 +27,7 @@ export default function Footer() {
     <footer className="bg-[#eefeee]" style={{ fontFamily: 'var(--font-geist-sans)' }}>
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
       <Image src="/dispatchOS-logo.svg" alt="DispatchOS Logo" width={132} height={32} className="inline-block  mb-2" />
-      <p className="text-xs font-medium uppercase tracking-[0.16em] text-gray-500">AI drafts → you approve → it ships.</p>
-        <div className=" hidden rounded-2xl border border-gray-200 bg-gray-50/60 px-4 py-4 sm:px-6">
-          <div className=" flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-            </div>
-            <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
-              <a
-                href="https://app.dispatchos.com"
-                className="inline-flex items-center justify-center rounded-full bg-[#00b377] px-4 py-2 text-sm font-medium text-gray-950 transition hover:bg-[#00c885]"
-              >
-                Generate my first week
-              </a>
-              <a
-                href="/pricing"
-                className="inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-900 transition hover:bg-gray-100"
-              >
-                Pricing
-              </a>
-            </div>
-          </div>
-        </div>
+      <p className="text-xs font-medium uppercase tracking-[0.16em] text-gray-500 md:mb-16">AI drafts → you approve → it ships.</p>
 
         <div className="mt-12 grid gap-10 md:grid-cols-3">
           <div>
