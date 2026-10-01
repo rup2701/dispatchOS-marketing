@@ -68,14 +68,14 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-4 border-t border-gray-200 pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
-            <span>© 2026 DispatchOS</span>
-            <a href="#" className="font-medium hover:text-gray-900">Status</a>
+          <div className="flex flex-wrap items-center gap-4 text-xs text-gray-600">
+            <span>© 2026 <b>˝DispatchOS</b></span>
+            {/* <a href="#" className="font-medium hover:text-gray-900">Status</a>÷ */}
           </div>
 
-          <div className="flex items-center gap-4 text-sm text-gray-600">
-            <a href="https://x.com/SFRupesh" className="font-medium hover:text-gray-900">X</a>
-            <a href="https://linkedin.com/in/rp-apps" className="font-medium hover:text-gray-900">LinkedIn</a>
+          <div className="flex items-center gap-4 text-xs text-gray-600">
+            <a href="https://x.com/SFRupesh" className="font-bold hover:text-gray-900">X</a>
+            <a href="https://linkedin.com/in/rp-apps" className="font-bold hover:text-gray-900">LinkedIn</a>
           </div>
         </div>
       </div>
