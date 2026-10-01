@@ -91,8 +91,8 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-4 text-sm text-gray-600">
-            <a href="https://x.com" className="font-medium hover:text-gray-900">X</a>
-            <a href="https://linkedin.com" className="font-medium hover:text-gray-900">LinkedIn</a>
+            <a href="https://x.com/SFRupesh" className="font-medium hover:text-gray-900">X</a>
+            <a href="https://linkedin.com/in/rp-apps" className="font-medium hover:text-gray-900">LinkedIn</a>
           </div>
         </div>
       </div>
